@@ -44,7 +44,7 @@ export function WorkshopsSection() {
         </article>
         <img
           src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/cda9ee308b3101e2336025bc7ba33ed44fe3e906?placeholderIfAbsent=true"
-          className="object-contain grow shrink self-stretch py-2 my-auto aspect-square min-w-60 w-[576px] max-md:max-w-full"
+          className="object-contain grow shrink self-stretch my-auto aspect-square min-w-60 w-[576px] max-md:max-w-full"
           alt="Workshop scene"
         />
       </section>
