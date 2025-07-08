@@ -7,14 +7,14 @@ export function Footer() {
       className="flex flex-wrap items-center w-full border-solid border-[0.5px] border-neutral-800 max-md:max-w-full"
       id="contact"
     >
-      <div className="flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 my-auto w-96 bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full">
+      <div className="flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 w-96 bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/54a4224dd53cc1396461786230ce21611dfe185b?placeholderIfAbsent=true"
           className="object-contain max-w-full aspect-[1.47] w-[118px]"
           alt="OCZKO.WORKSHOPS logo"
         />
       </div>
-      <nav className="flex flex-col grow shrink items-start self-stretch px-10 py-4 my-auto w-96 text-xs leading-tight uppercase bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-stone-50 max-md:px-5 max-md:max-w-full">
+      <nav className="flex flex-col grow shrink items-start self-stretch px-10 py-4 w-96 text-xs leading-tight uppercase bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-stone-50 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col items-start">
           <a
             href="#about"
@@ -53,7 +53,7 @@ export function Footer() {
           </a>
         </div>
       </nav>
-      <div className="flex flex-col grow shrink justify-center self-stretch px-10 py-4 my-auto w-96 bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-stone-50 max-md:px-5 max-md:max-w-full">
+      <div className="flex flex-col grow shrink justify-center self-stretch px-10 py-4 w-96 bg-indigo-800 border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-stone-50 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col flex-1 justify-center w-full">
           <div className="flex flex-col flex-1 justify-center w-full text-xs">
             <div className="flex gap-2 items-start w-full">

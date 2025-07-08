@@ -3,7 +3,7 @@ import * as React from "react";
 
 export function TestimonialsSection() {
   return (
-    <section className="flex overflow-hidden flex-col justify-center px-10 py-16 w-full bg-white border-solid border-b-[0.5px] border-b-neutral-800 min-h-[850px] max-md:px-5 max-md:max-w-full">
+    <section className="flex overflow-hidden flex-col justify-center w-full bg-white border-solid border-b-[0.5px] border-b-neutral-800 min-h-[850px] max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col flex-1 gap-16 justify-center w-full max-md:max-w-full">
         <div className="gap-12 w-full max-md:max-w-full">
           <div className="flex flex-col gap-12 justify-center w-full text-center max-md:max-w-full">

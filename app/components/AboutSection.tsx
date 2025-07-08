@@ -7,7 +7,7 @@ export function AboutSection() {
       className="flex flex-wrap items-center w-full max-md:max-w-full"
       id="about"
     >
-      <div className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-px my-auto border-solid bg-slate-200 border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
+      <div className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-px border-solid bg-slate-200 border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/39bca5b820a73fa9e39fe11e91fd330f06aa1537?placeholderIfAbsent=true"
           className="object-contain self-stretch my-auto aspect-[0.71] min-w-60 w-[509px]"

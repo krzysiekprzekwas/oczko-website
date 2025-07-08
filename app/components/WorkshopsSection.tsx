@@ -8,7 +8,7 @@ export function WorkshopsSection() {
         className="flex flex-wrap items-center w-full max-md:max-w-full"
         id="workshops"
       >
-        <article className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-16 my-auto bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
+        <article className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-16 bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch my-auto w-full basis-0 min-h-[600px] min-w-60 max-md:max-w-full">
             <div className="gap-12 self-stretch w-full max-md:max-w-full">
               <h2 className="text-7xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl">
@@ -82,7 +82,7 @@ export function WorkshopsSection() {
             </a>
           </div>
         </article>
-        <div className="flex overflow-hidden flex-col grow shrink justify-center self-stretch px-32 py-48 my-auto bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-w-60 w-[576px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+        <div className="flex overflow-hidden flex-col grow shrink justify-center self-stretch px-32 py-48 bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-w-60 w-[576px] max-md:px-5 max-md:py-24 max-md:max-w-full">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/310224212598e0165d4edaa55f04211653efe75a?placeholderIfAbsent=true"
             className="object-contain w-full aspect-[1.45] max-md:max-w-full"
