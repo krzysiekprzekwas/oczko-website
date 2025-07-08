@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "./Link";
 
 export function AboutSection() {
   return (
@@ -48,19 +49,12 @@ export function AboutSection() {
                 </p>
               </div>
             </div>
-            <a
+            <Link
               href="#workshops"
-              className="flex gap-1 justify-center items-center self-center p-2 mt-8 text-xs leading-tight text-indigo-800 uppercase"
-            >
-              <span className="self-stretch my-auto text-indigo-800">
-                Poznaj spOCZKO typiary
-              </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/248182a9e49515fdf5b8d90debfa7f724ecdfa22?placeholderIfAbsent=true"
-                className="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
-                alt="Arrow icon"
-              />
-            </a>
+              text="Poznaj spOCZKO typiary"
+              imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
+              imgAlt="Arrow icon"
+            />
           </div>
         </div>
       </article>

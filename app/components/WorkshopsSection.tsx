@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "./Link";
 
 export function WorkshopsSection() {
   return (
@@ -22,19 +23,12 @@ export function WorkshopsSection() {
                 podczas długich rozmów.
               </p>
             </div>
-            <a
+            <Link
               href="#workshops-details"
-              className="flex gap-1 justify-center items-center p-2 mt-6 text-xs leading-tight text-indigo-800 uppercase"
-            >
-              <span className="self-stretch my-auto text-indigo-800">
-                Rzuć OCZKIEM na warsztaty
-              </span>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-                className="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
-                alt="Arrow icon"
-              />
-            </a>
+              text="Rzuć OCZKIEM na warsztaty"
+              imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
+              imgAlt="Arrow icon"
+            />
             <img
               src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
               className="object-contain mt-6 max-w-full aspect-[1.07] w-[270px]"
