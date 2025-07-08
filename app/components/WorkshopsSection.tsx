@@ -1,0 +1,95 @@
+"use client";
+import * as React from "react";
+
+export function WorkshopsSection() {
+  return (
+    <>
+      <section
+        className="flex flex-wrap items-center w-full max-md:max-w-full"
+        id="workshops"
+      >
+        <article className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-16 my-auto bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
+          <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch my-auto w-full basis-0 min-h-[600px] min-w-60 max-md:max-w-full">
+            <div className="gap-12 self-stretch w-full max-md:max-w-full">
+              <h2 className="text-7xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl">
+                Warsztaty
+              </h2>
+              <p className="mt-12 text-base font-medium leading-5 text-indigo-900 max-md:mt-10 max-md:max-w-full">
+                spOCZKO warsztaty to zdecydowanie więcej niż tylko nauka
+                dziergania! To ręce zajęte drutami i głowy wolne od spiny –
+                dziewiarstwo wprowadzi każdego w kreatywne flow, które pozwoli
+                oderwać się od codzienności i kreatywnie spędzić czas z innymi
+                podczas długich rozmów.
+              </p>
+            </div>
+            <a
+              href="#workshops-details"
+              className="flex gap-1 justify-center items-center p-2 mt-6 text-xs leading-tight text-indigo-800 uppercase"
+            >
+              <span className="self-stretch my-auto text-indigo-800">
+                Rzuć OCZKIEM na warsztaty
+              </span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
+                className="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
+                alt="Arrow icon"
+              />
+            </a>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
+              className="object-contain mt-6 max-w-full aspect-[1.07] w-[270px]"
+              alt="Workshop illustration"
+            />
+          </div>
+        </article>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/cda9ee308b3101e2336025bc7ba33ed44fe3e906?placeholderIfAbsent=true"
+          className="object-contain grow shrink self-stretch py-2 my-auto aspect-square min-w-60 w-[576px] max-md:max-w-full"
+          alt="Workshop scene"
+        />
+      </section>
+
+      <section className="flex flex-wrap items-center w-full max-md:max-w-full">
+        <article className="flex overflow-hidden flex-col grow shrink justify-center self-stretch px-10 py-16 my-auto bg-red-300 border-solid border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
+          <div className="flex flex-col flex-1 gap-16 justify-center w-full max-md:max-w-full">
+            <div className="flex flex-col gap-12 justify-center w-full text-indigo-900 max-md:max-w-full">
+              <h3 className="text-2xl leading-tight text-indigo-900 max-md:max-w-full">
+                Reset głowy, totalny chill i zero presji.
+              </h3>
+              <p className="mt-12 text-base font-medium leading-5 text-indigo-900 max-md:mt-10 max-md:max-w-full">
+                Warsztaty to moment wyciszenia i skupienia się na jednej
+                czynności. Ty dziergasz, <br />a my nie spuszczamy z ciebie
+                OCZKA i uczymy wszystkiego krok po kroku.
+                <br />
+                <br />
+                Korzystamy z różnych rodzajów materiałów, rozmawiamy o ich
+                właściwościach i zastosowaniu. Chcemy, by osoby początkujące
+                wyszły z solidną dawką wiedzy i zajawką do kreatywniej robótki!
+              </p>
+            </div>
+            <a
+              href="#workshops-details"
+              className="flex gap-1 justify-center items-center self-center p-2 mt-16 text-xs leading-tight text-indigo-800 uppercase max-md:mt-10"
+            >
+              <span className="self-stretch my-auto text-indigo-800">
+                Rzuć OCZKIEM na warsztaty
+              </span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/14f55f981abbb9c86b9e2494ff31b7794fa0636e?placeholderIfAbsent=true"
+                className="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
+                alt="Arrow icon"
+              />
+            </a>
+          </div>
+        </article>
+        <div className="flex overflow-hidden flex-col grow shrink justify-center self-stretch px-32 py-48 my-auto bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-w-60 w-[576px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/310224212598e0165d4edaa55f04211653efe75a?placeholderIfAbsent=true"
+            className="object-contain w-full aspect-[1.45] max-md:max-w-full"
+            alt="Workshop materials"
+          />
+        </div>
+      </section>
+    </>
+  );
+}
