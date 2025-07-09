@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
@@ -9,6 +8,7 @@ import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 import { SocialsSection } from "./components/SocialsSection";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
@@ -30,6 +30,7 @@ export default function Home() {
       <CTASection />
       <SocialsSection />
       <Footer />
+      <Analytics/>
     </main>
   );
 }
