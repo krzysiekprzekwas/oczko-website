@@ -12,7 +12,7 @@ export function WorkshopsSection() {
         <article className="flex overflow-hidden grow shrink gap-2 justify-center items-center self-stretch px-10 py-16 bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-h-[720px] min-w-60 w-[576px] max-md:px-5 max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 min-h-[600px] min-w-60 max-md:max-w-full">
             <div className="gap-12 self-stretch w-full max-md:max-w-full">
-              <h2 className="text-7xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl">
+              <h2 className="text-7xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl font-salted">
                 Warsztaty
               </h2>
               <p className="mt-12 text-base font-medium leading-5 text-indigo-900 max-md:mt-10 max-md:max-w-full">

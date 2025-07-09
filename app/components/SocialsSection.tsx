@@ -9,7 +9,7 @@ export function SocialsSection() {
         <div className="flex flex-col flex-1 gap-12 justify-center w-full max-md:max-w-full">
           <div className="flex flex-col gap-12 w-full text-center max-md:max-w-full">
             <div className="flex flex-col gap-12 w-full max-md:max-w-full">
-              <h2 className="text-5xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl">
+              <h2 className="text-5xl leading-tight text-indigo-800 max-md:max-w-full max-md:text-4xl font-salted">
                 Miej na nas oczko
               </h2>
               <p className="self-center mt-12 text-base font-medium leading-5 text-indigo-900 w-[448px] max-md:mt-10 max-md:max-w-full">
