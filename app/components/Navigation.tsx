@@ -9,16 +9,16 @@ export function Navigation() {
           OCZKO.WORKSHOPS
         </h1>
       </div>
-      <nav className="flex gap-4 items-center self-stretch my-auto text-base leading-tight uppercase min-w-60">
+      <nav className="flex gap-4 items-center self-stretch my-auto text-base">
         <a
           href="#about"
-          className="flex gap-2 justify-center items-center self-stretch p-2 my-auto"
+          className="flex gap-2 justify-center items-center m-2 self-stretch border-b-1 border-transparent hover:border-indigo-800 transition-all duration-200 leading-none"
         >
-          <span className="self-stretch my-auto text-indigo-800">O nas</span>
+          <span className="self-stretch text-indigo-800">O nas</span>
         </a>
         <a
           href="#workshops"
-          className="flex gap-2 justify-center items-center self-stretch p-2 my-auto whitespace-nowrap"
+          className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-indigo-800 transition-all duration-200 leading-1"
         >
           <span className="self-stretch my-auto text-indigo-800">
             Warsztaty
@@ -26,7 +26,7 @@ export function Navigation() {
         </a>
         <a
           href="#contact"
-          className="flex gap-2 justify-center items-center self-stretch p-2 my-auto whitespace-nowrap"
+          className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-indigo-800 transition-all duration-200 leading-1"
         >
           <span className="self-stretch my-auto text-indigo-800">Kontakt</span>
         </a>
