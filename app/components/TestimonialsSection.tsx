@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "./Link";
 
 export function TestimonialsSection() {
   return (
@@ -35,19 +36,12 @@ export function TestimonialsSection() {
             />
           </div>
         </div>
-        <a
-          href="https://instagram.com"
-          className="flex gap-1 justify-center items-center self-center p-2 mt-16 text-xs leading-tight text-indigo-800 uppercase max-md:mt-10"
-        >
-          <span className="self-stretch my-auto text-indigo-800">
-            Zobacz więcej na naszym instagramie
-          </span>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/43c7c58b8c471defef325ab946881a4ed2f8c56c?placeholderIfAbsent=true"
-            className="object-contain shrink-0 self-stretch my-auto w-3 aspect-square"
-            alt="Arrow icon"
-          />
-        </a>
+        <Link
+          href="https://www.instagram.com/oczko.workshops/"
+          text="Zobacz więcej na naszym instagramie"
+          imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
+          imgAlt="Arrow icon"
+        />
       </div>
     </section>
   );
