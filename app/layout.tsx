@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oczko.Workshops",
+  title: "OCZKO.workshops",
   description: "Warsztaty dziewiastwa i szydełkowania",
 };
 
