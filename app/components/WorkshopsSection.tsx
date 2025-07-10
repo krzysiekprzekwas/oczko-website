@@ -41,7 +41,7 @@ export function WorkshopsSection() {
       </section>
 
       <section className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
-        <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-red-300 border-[0.5px] border-neutral-800">
+        <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-orange-400 border-[0.5px] border-neutral-800">
           <div className="flex flex-col flex-1 gap-16 justify-center w-full max-md:max-w-full px-10 py-16">
             <div className="flex flex-col gap-12 justify-center w-full text-oczko-violet-600  max-md:max-w-full">
               <h3 className="text-2xl leading-tight text-oczko-violet-600  max-md:max-w-full">
