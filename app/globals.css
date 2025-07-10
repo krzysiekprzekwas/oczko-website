@@ -45,3 +45,6 @@ body {
   font-display: swap;
 }
 
+@theme {
+  --color-oczko-violet: #4C3D93;
+}

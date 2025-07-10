@@ -20,7 +20,7 @@ export function AboutSection() {
           <div className="gap-12 w-full text-center">
             <div className="flex flex-col gap-12 w-full">
               <div className="flex flex-col gap-12 items-start w-full">
-                <h2 className="text-7xl leading-tight text-indigo-800 max-md:text-4xl font-salted">
+                <h2 className="text-7xl leading-tight text-oczko-violet max-md:text-4xl font-salted">
                   O Oczku
                 </h2>
                 <p className="mt-12 text-base font-medium leading-5 text-indigo-900 max-md:mt-10">
