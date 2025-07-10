@@ -29,14 +29,10 @@ export function SocialsSection() {
             <Link
               href="https://www.instagram.com/oczko.workshops/"
               text="Instagram"
-              imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-              imgAlt="Arrow icon"
             />
             <Link
               href="https://www.facebook.com/profile.php?id=61567128943041"
               text="Facebook"
-              imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-              imgAlt="Arrow icon"
             />
           </div>
         </div>

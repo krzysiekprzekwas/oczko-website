@@ -67,7 +67,7 @@ export function Footer() {
                 </div>
                 <div className="flex flex-col items-start w-full whitespace-nowrap">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/oczko.workshops/"
                     className="flex gap-1 items-center p-2"
                   >
                     <span className="self-stretch my-auto text-stone-50">
@@ -80,7 +80,7 @@ export function Footer() {
                     />
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61567128943041"
                     className="flex gap-1 items-center p-2"
                   >
                     <span className="self-stretch my-auto text-stone-50">

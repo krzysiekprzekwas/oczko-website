@@ -23,8 +23,6 @@ export function WorkshopsSection() {
               <Link
                 href="#workshops-details"
                 text="Rzuć OCZKIEM na warsztaty"
-                imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-                imgAlt="Arrow icon"
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
@@ -63,8 +61,6 @@ export function WorkshopsSection() {
             <Link
               href="#workshops-details"
               text="Rzuć OCZKIEM na warsztaty"
-              imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-              imgAlt="Arrow icon"
             />
           </div>
         </article>

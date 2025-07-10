@@ -39,8 +39,6 @@ export function TestimonialsSection() {
         <Link
           href="https://www.instagram.com/oczko.workshops/"
           text="Zobacz więcej na naszym instagramie"
-          imgSrc="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/4c19649ddec6c555e63e97100afc9136d44089e5?placeholderIfAbsent=true"
-          imgAlt="Arrow icon"
         />
       </div>
     </section>
