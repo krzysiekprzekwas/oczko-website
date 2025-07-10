@@ -14,13 +14,13 @@ export function Navigation() {
           href="#about"
           className="flex gap-2 justify-center items-center m-2 self-stretch border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-none"
         >
-          <span className="self-stretch text-oczko-violet">O NAS</span>
+          <span className="self-stretch text-oczko-violet-500">O NAS</span>
         </a>
         <a
           href="#workshops"
           className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-1"
         >
-          <span className="self-stretch my-auto text-oczko-violet">
+          <span className="self-stretch my-auto text-oczko-violet-500">
             WARSZTATY
           </span>
         </a>
@@ -28,7 +28,7 @@ export function Navigation() {
           href="#contact"
           className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-1"
         >
-          <span className="self-stretch my-auto text-oczko-violet">
+          <span className="self-stretch my-auto text-oczko-violet-500">
             KONTAKT
           </span>
         </a>
