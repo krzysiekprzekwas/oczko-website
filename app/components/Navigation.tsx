@@ -4,11 +4,11 @@ import * as React from "react";
 export function Navigation() {
   return (
     <header className="sticky top-0 z-50 flex flex-wrap gap-10 justify-between items-center px-10 w-full text-oczko-violet bg-orange-50 border-solid border-[0.5px] border-neutral-800 min-h-20 max-md:px-5 max-md:max-w-full">
-      <div className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
+      <a href="#" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
         <h1 className="self-stretch my-auto text-oczko-violet font-salted">
           OCZKO.WORKSHOPS
         </h1>
-      </div>
+      </a>
       <nav className="flex gap-4 items-center self-stretch my-auto text-base">
         <a
           href="#about"
