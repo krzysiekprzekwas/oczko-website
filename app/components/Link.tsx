@@ -10,7 +10,7 @@ interface LinkProps {
 const Link: React.FC<LinkProps> = ({
   href,
   text,
-  color = "oczko-violet",
+  color = "oczko-violet-500",
 }) => {
   return (
     <a

@@ -5,8 +5,8 @@ import Link from "./Link";
 export function CTASection() {
   return (
     <section className="flex flex-wrap items-center w-full max-md:max-w-full">
-      <article className="flex overflow-hidden flex-col grow shrink justify-between self-stretch py-16 pr-7 pl-10 w-96 bg-oczko-violet border-solid border-[0.5px] border-neutral-800 min-h-[480px] min-w-60 text-slate-200 max-md:px-5 max-md:max-w-full">
-        <h2 className="text-4xl leading-10 text-slate-200 font-salted">
+      <article className="flex overflow-hidden flex-col grow shrink justify-between self-stretch py-16 pr-7 pl-10 w-96 bg-oczko-violet-500 border-solid border-[0.5px] border-neutral-800 min-h-[480px] min-w-60 text-oczko-violet-100 max-md:px-5 max-md:max-w-full">
+        <h2 className="text-4xl leading-10 text-oczko-violet-100 font-salted">
           Sprawdź nadchodzące warsztaty!
         </h2>
         <Link

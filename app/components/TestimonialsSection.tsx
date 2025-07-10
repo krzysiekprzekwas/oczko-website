@@ -8,10 +8,10 @@ export function TestimonialsSection() {
       <div className="flex flex-col flex-1 gap-16 justify-center w-full px-10 py-16 max-md:max-w-full">
         <div className="gap-12 w-full max-md:max-w-full">
           <div className="flex flex-col gap-12 justify-center w-full text-center max-md:max-w-full">
-            <h2 className="text-5xl leading-tight text-oczko-violet max-md:max-w-full max-md:text-4xl font-salted">
+            <h2 className="text-5xl leading-tight text-oczko-violet-500 max-md:max-w-full max-md:text-4xl font-salted">
               Co mówią o oczku?
             </h2>
-            <p className="self-center mt-12 text-base font-medium leading-5 text-indigo-900 w-[840px] max-md:mt-10 max-md:max-w-full">
+            <p className="self-center mt-12 text-base font-medium leading-5 text-oczko-violet-600 w-[840px] max-md:mt-10 max-md:max-w-full">
               Każde spotkanie to masa dobrej energii, śmiechu i oczywiście
               dziergania. Cieszymy się, że nasze warsztaty zostawiają po sobie
               nie tylko piękne robótki, ale i świetne wspomnienia. Zobacz, co

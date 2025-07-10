@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section className="relative w-full">
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/f64442611145eedcfb6664e0042810be4ebcfd1f?placeholderIfAbsent=true"
+        src="/images/hero.png"
         className="object-contain w-full max-md:max-w-full block"
         alt="Hero image showcasing knitting workshops"
       />
