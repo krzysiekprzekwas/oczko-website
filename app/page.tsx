@@ -9,12 +9,25 @@ import { Footer } from "./components/Footer";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 import { SocialsSection } from "./components/SocialsSection";
 import { Analytics } from "@vercel/analytics/next";
+import { BannerItem, BannerWithImages } from "./components/BannerWithImages";
+
+const items: BannerItem[] = [
+  { type: "text", value: "DZIERGANIE" },
+  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "text", value: "SPOTKANIA" },
+  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "text", value: "WARSZTATY" },
+  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "text", value: "ZABAWA" },
+  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+];
 
 export default function Home() {
   return (
     <main>
       <Navigation />
       <HeroSection />
+      <BannerWithImages items={items} />
       <AboutSection />
       <PhotoCarousel />
       <Banner />
