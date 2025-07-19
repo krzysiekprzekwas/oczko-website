@@ -12,11 +12,14 @@ export function SocialsSection() {
               <h2 className="text-5xl leading-tight text-oczko-violet-500 max-md:max-w-full max-md:text-4xl font-salted">
                 Miej na nas oczko
               </h2>
-              <p className="self-center mt-12 text-base font-medium leading-5 text-oczko-violet-600 w-[448px] max-md:mt-10 max-md:max-w-full">
-                Poza warsztatami prowadzimy rowniez spotkania dla entuzjastek i
-                entuzjastow dziewiarskiej sztuki o nazwie OPEN KNITTING.
+              <p className="self-center mt-12 text-base font-medium leading-5 text-oczko-violet-600 w-[604px] max-md:mt-10 max-md:max-w-full">
+                Warsztaty to nie wszystko - nasze głowy buzują NON STOP i chętnie angażujemy się w kolejne projekty!
                 <br />
-                Zaobserwuj nas na instagramie i badz na biezaco!
+                <br />
+                Jedną z naszych inicjatyw są spotkania OPEN KNITTING, czyli meetingi dla entuzjastek i entuzjastów dziergania, którzy chcą poznać inne spOCZKO osóbki i spędzić z nimi miło czas! 
+                <br />
+                <br />
+                Śledź nas na Instagramie, by być na bieżąco!
               </p>
             </div>
             <img

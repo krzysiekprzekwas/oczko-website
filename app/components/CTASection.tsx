@@ -22,7 +22,7 @@ export function CTASection() {
           alt="Workshop showcase"
         />
       </div>
-      <article className="flex overflow-hidden flex-col grow shrink justify-between self-stretch px-10 py-16 w-96 border-solid bg-oczko-violet-200 border-[0.5px] border-neutral-800 min-h-[480px] min-w-60 text-oczko-gray-100 max-md:px-5 max-md:max-w-full">
+      <article className="flex overflow-hidden flex-col grow shrink justify-between self-stretch px-10 py-16 w-96 border-solid bg-oczko-violet-300 border-[0.5px] border-neutral-800 min-h-[480px] min-w-60 text-oczko-gray-100 max-md:px-5 max-md:max-w-full">
         <h2 className="text-4xl leading-10 text-oczko-gray-100 font-salted">
           Chcesz z nami współpracować?
         </h2>

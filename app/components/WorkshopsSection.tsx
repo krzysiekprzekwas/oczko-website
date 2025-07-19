@@ -9,15 +9,12 @@ export function WorkshopsSection() {
         <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
             <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16">
               <div className="gap-12 self-stretch w-full max-md:max-w-full">
-                <h2 className="text-7xl leading-tight text-oczko-violet-500 max-md:max-w-full max-md:text-4xl font-salted">
+                <h2 className="text-7xl leading-tight text-oczko-violet-500 font-salted max-md:max-w-full max-md:text-4xl font-salted">
                   Warsztaty
                 </h2>
                 <p className="mt-12 text-base font-medium leading-5 text-oczko-violet-600  max-md:mt-10 max-md:max-w-full">
-                  spOCZKO warsztaty to zdecydowanie więcej niż tylko nauka
-                  dziergania! To ręce zajęte drutami i głowy wolne od spiny –
-                  dziewiarstwo wprowadzi każdego w kreatywne flow, które pozwoli
-                  oderwać się od codzienności i kreatywnie spędzić czas z innymi
-                  podczas długich rozmów.
+                  <b>spOCZKO warsztaty to więcej niż nauka dziergania.</b> To ręce zajęte drutami, głowy wolne od spiny i luz, którego na co dzień często brakuje. 
+                  Dziewiarstwo wciąga w kreatywny flow, pozwala oderwać się od rutyny i spędzić czas w dobrym towarzystwie - z uśmiechem i własnoręcznie zrobionym udziergiem na koniec.
                 </p>
               </div>
               <Link
@@ -44,18 +41,11 @@ export function WorkshopsSection() {
         <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-orange-400 border-[0.5px] border-neutral-800">
           <div className="flex flex-col flex-1 gap-16 justify-center w-full max-md:max-w-full px-10 py-16">
             <div className="flex flex-col gap-12 justify-center w-full text-oczko-violet-600  max-md:max-w-full">
-              <h3 className="text-2xl leading-tight text-oczko-violet-600  max-md:max-w-full">
+              <h3 className="text-2xl leading-tight text-oczko-violet-600 font-salted max-md:max-w-full">
                 Reset głowy, totalny chill i zero presji.
               </h3>
               <p className="mt-12 text-base font-medium leading-5 text-oczko-violet-600  max-md:mt-10 max-md:max-w-full">
-                Warsztaty to moment wyciszenia i skupienia się na jednej
-                czynności. Ty dziergasz, <br />a my nie spuszczamy z ciebie
-                OCZKA i uczymy wszystkiego krok po kroku.
-                <br />
-                <br />
-                Korzystamy z różnych rodzajów materiałów, rozmawiamy o ich
-                właściwościach i zastosowaniu. Chcemy, by osoby początkujące
-                wyszły z solidną dawką wiedzy i zajawką do kreatywniej robótki!
+              <b>Warsztaty to kreatywny czas dla Ciebie!</b> Ty dziergasz, a my nie spuszczamy z Ciebie OCZKA – pokazujemy wszystko krok po kroku, bez presji i bez pośpiechu.Pracujemy na różnych rodzajach włóczek, rozmawiamy o ich właściwościach, uczymy, jak dobierać je do projektów. Chcemy, żeby każda osoba początkująca wyszła nie tylko z udziergiem, ale też z konkretną wiedzą i zajawką na dalsze robótki.
               </p>
             </div>
             <Link

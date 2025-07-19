@@ -24,11 +24,7 @@ export function AboutSection() {
                   O Oczku
                 </h2>
                 <p className="mt-12 text-base font-medium leading-5 text-oczko-violet-600 max-md:mt-10">
-                  OCZKO lewe - Wera i OCZKO prawe - Justa, czyli dwie
-                  dziewiary, które organizują warsztaty z robienia na drutach
-                  dla wszystkich chcących poznać niesamowity świat
-                  dziewiarstwa, ale przede wszystkim kreatywnie się otworzyć i
-                  spędzić czas z innymi.
+                  OCZKO lewe - Wera i OCZKO prawe - Justa, czyli dwie dziewiary, które organizują warsztaty z robienia na drutach dla wszystkich chcących poznać niesamowity świat dziewiarstwa, ale przede wszystkim kreatywnie się otworzyć i spędzić czas z innymi.
                 </p>
               </div>
               <img
@@ -38,13 +34,11 @@ export function AboutSection() {
               />
             </div>
             <div className="gap-8 mt-12 w-full text-oczko-violet-600 max-md:mt-10">
-              <h3 className="text-2xl leading-tight text-oczko-violet-600">
+              <h3 className="text-2xl leading-tight text-oczko-violet-600 font-salted">
                 Nasz statement?
               </h3>
               <p className="mt-8 text-base font-medium leading-5 text-oczko-violet-600">
-                KNITTING IS HOT & FUN! i każdy, niezależnie od poziomu
-                umiejętności manualnych, może odnaleźć ZEN w przerabianiu
-                oczek i tworzeniu udziergu własnymi rękami.
+                KNITTING IS HOT & FUN! i każdy, niezależnie od poziomu umiejętności manualnych, może odnaleźć ZEN w przerabianiu oczek i tworzeniu udziergu własnymi rękami.
               </p>
             </div>
           </div>
