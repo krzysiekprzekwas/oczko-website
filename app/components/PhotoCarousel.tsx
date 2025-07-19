@@ -23,103 +23,85 @@ const defaultImages: CarouselImage[] = [
 
 export function PhotoCarousel({ images = defaultImages }: { images?: CarouselImage[] }) {
   const [active, setActive] = React.useState(0);
-  const [dragOffset, setDragOffset] = React.useState(0);
-  const [isDragging, setIsDragging] = React.useState(false);
-  const [windowWidth, setWindowWidth] = React.useState(0);
-  const touchStartX = React.useRef<number | null>(null);
+  const startX = React.useRef(0);
+  const threshold = 50; // Minimum swipe distance
 
-  React.useEffect(() => {
-    // Set window width on mount and on resize
-    const updateWidth = () => setWindowWidth(window.innerWidth);
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
-  // Handle swipe/drag
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    setIsDragging(true);
-  };
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const currentX = e.touches[0].clientX;
-    setDragOffset(currentX - touchStartX.current);
-  };
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const diff = e.changedTouches[0].clientX - touchStartX.current;
-    let newActive = active;
-    if (diff > 60 && active > 0) newActive = active - 1;
-    else if (diff < -60 && active < images.length - 1) newActive = active + 1;
-    setActive(newActive);
-    setDragOffset(0);
-    setIsDragging(false);
-    touchStartX.current = null;
+    startX.current = e.touches[0].clientX;
   };
 
-  // Calculate transform for real-time dragging
-  const getTransform = () => {
-    const base = -active * 100;
-    // Guard against windowWidth being 0 (SSR)
-    if (!windowWidth) return `translateX(${base}%)`;
-    const percentOffset = (dragOffset / windowWidth) * 100;
-    return `translateX(calc(${base}% + ${percentOffset}vw))`;
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX.current - endX;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0 && active < images.length - 1) {
+        // Swipe left - next image
+        setActive(active + 1);
+      } else if (diff < 0 && active > 0) {
+        // Swipe right - previous image
+        setActive(active - 1);
+      }
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    setActive(index);
   };
 
   return (
-    <section className="w-full">
-      {/* Mobile carousel */}
-      <div className="block md:hidden relative w-full overflow-hidden">
-        <div
-          className="w-full h-auto touch-pan-x"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+    <div className="relative w-full max-w-md mx-auto">
+      {/* Image container */}
+      <div 
+        className="overflow-hidden bg-gray-100"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div 
+          className="flex transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${active * 100}%)` }}
         >
-          <div
-            className="flex transition-transform duration-300"
-            style={{
-              width: `${images.length * 100}%`,
-              transform: getTransform(),
-              transition: isDragging ? 'none' : 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
-            }}
-          >
-            {images.map((img, idx) => (
-              <img
-                key={idx}
-                src={img.src}
-                alt={img.alt}
-                className="w-full aspect-square object-cover flex-shrink-0"
-                style={{ width: `${100 / images.length}%` }}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Dot markers */}
-        <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-4 z-10">
-          {images.map((_, idx) => (
-            <button
+          {images.map((img, idx) => (
+            <img
               key={idx}
-              className={`w-4 h-4 rounded-full border border-white bg-white/70 transition-all ${active === idx ? 'opacity-100' : 'opacity-40'}`}
-              onClick={() => setActive(idx)}
-              aria-label={`Go to slide ${idx + 1}`}
+              src={img.src}
+              alt={img.alt}
+              className="w-full aspect-square object-cover flex-shrink-0"
+              draggable={false}
             />
           ))}
         </div>
       </div>
-      {/* Desktop: show all images side by side */}
-      <div className="hidden md:flex flex-row w-full">
-        {images.map((img, idx) => (
-          <img
+
+      {/* Navigation dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {images.map((_, idx) => (
+          <button
             key={idx}
-            src={img.src}
-            alt={img.alt}
-            className="w-1/3 aspect-square object-cover"
+            className={`w-4 h-4 rounded-full border border-white bg-white/70 transition-all ${active === idx ? 'opacity-100' : 'opacity-40'}`}
+            onClick={() => goToSlide(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>
-    </section>
+
+      {/* Optional: Arrow navigation for larger screens */}
+      <button
+        onClick={() => active > 0 && goToSlide(active - 1)}
+        disabled={active === 0}
+        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center disabled:opacity-30 hover:bg-black/70 transition-colors"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+      <button
+        onClick={() => active < images.length - 1 && goToSlide(active + 1)}
+        disabled={active === images.length - 1}
+        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center disabled:opacity-30 hover:bg-black/70 transition-colors"
+        aria-label="Next image"
+      >
+        ›
+      </button>
+    </div>
   );
 }
