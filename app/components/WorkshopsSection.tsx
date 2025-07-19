@@ -6,8 +6,8 @@ export function WorkshopsSection() {
   return (
     <>
       <section id="workshops" className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
-        <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
-            <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16">
+        <article className="w-full md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
+            <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
               <div className="gap-12 self-stretch w-full max-md:max-w-full">
                 <h2 className="text-7xl leading-tight text-oczko-violet-500 font-salted max-md:max-w-full max-md:text-4xl font-salted">
                   Warsztaty
@@ -23,7 +23,7 @@ export function WorkshopsSection() {
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
-                className="object-contain mt-6 max-w-full aspect-[1.07] w-[270px]"
+                className="object-contain mt-6 w-full max-w-[270px] h-auto"
                 alt="Workshop illustration"
               />
             </div>

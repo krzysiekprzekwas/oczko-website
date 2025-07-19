@@ -108,91 +108,90 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto">
-      {/* Image container */}
-      <div 
-        className="overflow-hidden bg-gray-100"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
-        <div 
-          className="flex transition-transform duration-300 ease-out"
-          style={{ transform: `translateX(-${active * 100}%)` }}
-        >
-          {images.map((img, idx) => (
-            <img
-              key={idx}
-              src={img.src}
-              alt={img.alt}
-              className="w-full aspect-square object-cover flex-shrink-0"
-              draggable={false}
-            />
-          ))}
-        </div>
-        {/* Navigation dots overlayed on image */}
-        <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-2 z-10 pointer-events-none">
-          {images.map((_, idx) => {
-            // Progress ring parameters
-            const size = 24;
-            const stroke = 3;
-            const radius = (size - stroke) / 2;
-            const circumference = 2 * Math.PI * radius;
-            const offset = idx === active ? circumference * (1 - progress) : circumference;
-            return (
-              <button
-                key={idx}
-                className={`relative w-6 h-6 flex items-center justify-center bg-transparent pointer-events-auto`}
-                style={{ opacity: active === idx ? 1 : 0.4, transition: 'opacity 0.2s' }}
-                onClick={() => goToSlide(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-              >
-                {/* Progress ring SVG */}
-                <svg width={size} height={size} className="absolute top-0 left-0" style={{ pointerEvents: 'none' }}>
-                  <circle
-                    cx={size / 2}
-                    cy={size / 2}
-                    r={radius}
-                    fill="none"
-                    stroke="#fff"
-                    strokeWidth={stroke}
-                    opacity={0.5}
-                  />
-                  <circle
-                    cx={size / 2}
-                    cy={size / 2}
-                    r={radius}
-                    fill="none"
-                    stroke="#2563eb"
-                    strokeWidth={stroke}
-                    strokeDasharray={circumference}
-                    strokeDashoffset={offset}
-                    style={{ transition: idx === active ? 'stroke-dashoffset 0.1s linear' : 'none' }}
-                  />
-                </svg>
-                <span className="block w-4 h-4 rounded-full border border-white bg-white/70 z-10" />
-              </button>
-            );
-          })}
+    <>
+      {/* Mobile: Carousel */}
+      <div className="block md:hidden">
+        <div className="relative w-full max-w-md mx-auto">
+          {/* Image container */}
+          <div 
+            className="overflow-hidden bg-gray-100"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div 
+              className="flex transition-transform duration-300 ease-out"
+              style={{ transform: `translateX(-${active * 100}%)` }}
+            >
+              {images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full aspect-square object-cover flex-shrink-0"
+                  draggable={false}
+                />
+              ))}
+            </div>
+            {/* Navigation dots overlayed on image */}
+            <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-2 z-10 pointer-events-none">
+              {images.map((_, idx) => {
+                // Progress ring parameters
+                const size = 24;
+                const stroke = 3;
+                const radius = (size - stroke) / 2;
+                const circumference = 2 * Math.PI * radius;
+                const offset = idx === active ? circumference * (1 - progress) : circumference;
+                return (
+                  <button
+                    key={idx}
+                    className={`relative w-6 h-6 flex items-center justify-center bg-transparent pointer-events-auto`}
+                    style={{ opacity: active === idx ? 1 : 0.4, transition: 'opacity 0.2s' }}
+                    onClick={() => goToSlide(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  >
+                    {/* Progress ring SVG */}
+                    <svg width={size} height={size} className="absolute top-0 left-0" style={{ pointerEvents: 'none' }}>
+                      <circle
+                        cx={size / 2}
+                        cy={size / 2}
+                        r={radius}
+                        fill="none"
+                        stroke="#fff"
+                        strokeWidth={stroke}
+                        opacity={0.5}
+                      />
+                      <circle
+                        cx={size / 2}
+                        cy={size / 2}
+                        r={radius}
+                        fill="none"
+                        stroke="#4C3D93"
+                        strokeWidth={stroke}
+                        strokeDasharray={circumference}
+                        strokeDashoffset={offset}
+                        style={{ transition: idx === active ? 'stroke-dashoffset 0.1s linear' : 'none' }}
+                      />
+                    </svg>
+                    <span className="block w-4 h-4 rounded-full border border-white bg-white/70 z-10" />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Optional: Arrow navigation for larger screens */}
-      <button
-        onClick={() => active > 0 && goToSlide(active - 1)}
-        disabled={active === 0}
-        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center disabled:opacity-30 hover:bg-black/70 transition-colors"
-        aria-label="Previous image"
-      >
-        ‹
-      </button>
-      <button
-        onClick={() => active < images.length - 1 && goToSlide(active + 1)}
-        disabled={active === images.length - 1}
-        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center disabled:opacity-30 hover:bg-black/70 transition-colors"
-        aria-label="Next image"
-      >
-        ›
-      </button>
-    </div>
+      {/* Desktop: Static row */}
+      <div className="hidden md:flex flex-row w-full">
+        {images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img.src}
+            alt={img.alt}
+            className="w-1/3 aspect-square object-cover"
+          />
+        ))}
+      </div>
+    </>
   );
 }
