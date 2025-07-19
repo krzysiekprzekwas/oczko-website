@@ -23,18 +23,37 @@ const defaultImages: CarouselImage[] = [
 
 export function PhotoCarousel({ images = defaultImages }: { images?: CarouselImage[] }) {
   const [active, setActive] = React.useState(0);
+  const [dragOffset, setDragOffset] = React.useState(0);
+  const [isDragging, setIsDragging] = React.useState(false);
   const touchStartX = React.useRef<number | null>(null);
 
-  // Handle swipe
+  // Handle swipe/drag
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+    setIsDragging(true);
+  };
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const currentX = e.touches[0].clientX;
+    setDragOffset(currentX - touchStartX.current);
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
     const diff = e.changedTouches[0].clientX - touchStartX.current;
-    if (diff > 40 && active > 0) setActive(active - 1);
-    else if (diff < -40 && active < images.length - 1) setActive(active + 1);
+    let newActive = active;
+    if (diff > 60 && active > 0) newActive = active - 1;
+    else if (diff < -60 && active < images.length - 1) newActive = active + 1;
+    setActive(newActive);
+    setDragOffset(0);
+    setIsDragging(false);
     touchStartX.current = null;
+  };
+
+  // Calculate transform for real-time dragging
+  const getTransform = () => {
+    const base = -active * 100;
+    const percentOffset = (dragOffset / window.innerWidth) * 100;
+    return `translateX(calc(${base}% + ${percentOffset}vw))`;
   };
 
   return (
@@ -42,15 +61,30 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
       {/* Mobile carousel */}
       <div className="block md:hidden relative w-full overflow-hidden">
         <div
-          className="w-full h-auto"
+          className="w-full h-auto touch-pan-x"
           onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         >
-          <img
-            src={images[active].src}
-            alt={images[active].alt}
-            className="w-full aspect-square object-cover transition-all duration-300"
-          />
+          <div
+            className="flex transition-transform duration-300"
+            style={{
+              width: `${images.length * 100}%`,
+              transform: getTransform(),
+              transition: isDragging ? 'none' : 'transform 0.3s cubic-bezier(0.4,0,0.2,1)',
+            }}
+          >
+            {images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img.src}
+                alt={img.alt}
+                className="w-full aspect-square object-cover flex-shrink-0"
+                style={{ width: `${100 / images.length}%` }}
+              />
+            ))}
+          </div>
         </div>
         {/* Dot markers */}
         <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-4 z-10">

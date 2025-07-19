@@ -20,11 +20,9 @@ const heroImages: CarouselImage[] = [
 export function HeroSection() {
   return (
     <section className="relative w-full">
-      {/* Mobile: Carousel, no H1 */}
       <div className="block md:hidden">
         <PhotoCarousel images={heroImages}/>
       </div>
-      {/* Desktop: Static hero image and H1 */}
       <div className="hidden md:block relative w-full">
         <img
           src="/images/hero.png"
