@@ -25,7 +25,16 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
   const [active, setActive] = React.useState(0);
   const [dragOffset, setDragOffset] = React.useState(0);
   const [isDragging, setIsDragging] = React.useState(false);
+  const [windowWidth, setWindowWidth] = React.useState(0);
   const touchStartX = React.useRef<number | null>(null);
+
+  React.useEffect(() => {
+    // Set window width on mount and on resize
+    const updateWidth = () => setWindowWidth(window.innerWidth);
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
 
   // Handle swipe/drag
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -52,7 +61,9 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
   // Calculate transform for real-time dragging
   const getTransform = () => {
     const base = -active * 100;
-    const percentOffset = (dragOffset / window.innerWidth) * 100;
+    // Guard against windowWidth being 0 (SSR)
+    if (!windowWidth) return `translateX(${base}%)`;
+    const percentOffset = (dragOffset / windowWidth) * 100;
     return `translateX(calc(${base}% + ${percentOffset}vw))`;
   };
 
