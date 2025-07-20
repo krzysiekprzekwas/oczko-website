@@ -10,6 +10,7 @@ import { TestimonialsSection } from "./components/TestimonialsSection";
 import { SocialsSection } from "./components/SocialsSection";
 import { Analytics } from "@vercel/analytics/next";
 import { BannerItem, BannerWithImages } from "./components/BannerWithImages";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const items: BannerItem[] = [
   { type: "text", value: "DZIERGANIE" },
@@ -44,6 +45,7 @@ export default function Home() {
       <SocialsSection />
       <Footer />
       <Analytics/>
+      <SpeedInsights/>
     </main>
   );
 }
