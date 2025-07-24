@@ -111,7 +111,7 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
     <>
       {/* Mobile: Carousel */}
       <div className="block md:hidden">
-        <div className="relative w-full max-w-md mx-auto">
+        <div className="relative w-full">
           {/* Image container */}
           <div 
             className="overflow-hidden bg-gray-100"

@@ -33,7 +33,7 @@ export default function Home() {
       <PhotoCarousel />
       <Banner />
       <WorkshopsSection />
-      <section>
+      <section className="max-md:hidden">
         <img
         src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/bfa5bee6d4f8cb3de63a21bdf8d206877ba3137d?placeholderIfAbsent=true"
           className="object-contain w-full max-md:max-w-full"

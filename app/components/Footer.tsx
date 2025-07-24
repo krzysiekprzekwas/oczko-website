@@ -33,7 +33,7 @@ export function Footer() {
             <div className="self-center md:self-start">
               <div className="flex gap-1 items-center p-2">
                 <span className="self-stretch my-auto text-oczko-gray-100">
-                  Miej nas na Oczku
+                  Miej na nas oczko
                 </span>
               </div>
             </div>
