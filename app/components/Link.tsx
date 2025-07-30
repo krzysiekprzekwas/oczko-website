@@ -5,17 +5,20 @@ interface LinkProps {
   href: string;
   text: string;
   color?: string;
+  onClick?: () => void;
 }
 
 const Link: React.FC<LinkProps> = ({
   href,
   text,
   color = "oczko-violet-500",
+  onClick,
 }) => {
   return (
     <a
       href={href}
-      className={`flex gap-1 justify-center items-center p-2 text-xs leading-tight text-${color} uppercase group hover:gap-2 transition-all duration-200`}
+      onClick={onClick}
+      className={`flex gap-1 md:gap-2 justify-center items-center p-2 text-xs md:text-sm leading-tight text-${color} uppercase group hover:gap-2 md:hover:gap-3 transition-all duration-200`}
     >
       <span className={`self-stretch my-auto text-${color} group-hover:underline transition-all duration-200`}>
         {text}

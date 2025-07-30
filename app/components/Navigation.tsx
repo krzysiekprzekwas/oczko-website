@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "./Link";
 
 export function Navigation() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -9,7 +10,7 @@ export function Navigation() {
     <header className="sticky top-0 z-50 flex flex-wrap gap-10 justify-between items-center px-10 w-full text-oczko-violet-500 bg-oczko-green-100 border-solid border-[0.5px] border-neutral-800 min-h-20 max-md:px-5 max-md:max-w-full">
       <a href="#" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
         <h1 className="self-stretch my-auto text-oczko-violet-500 font-salted">
-          OCZKO.WORKSHOPS
+          oczko.workshops
         </h1>
       </a>
       {/* Hamburger/Close button for mobile */}
@@ -19,23 +20,16 @@ export function Navigation() {
         onClick={() => setMenuOpen((open) => !open)}
       >
         {menuOpen ? (
-          // X icon
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="8" y1="8" x2="24" y2="24" stroke="#5B4294" strokeWidth="2" strokeLinecap="round" />
-            <line x1="24" y1="8" x2="8" y2="24" stroke="#5B4294" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+          // Close button
+          <img src="/images/close button.svg" alt="Close menu" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(1000%) hue-rotate(240deg) brightness(50%) contrast(100%)' }} />
         ) : (
-          // Hamburger icon
-          <>
-            <span className="block w-7 h-0.5 bg-oczko-violet-500 mb-1.5 rounded transition-all duration-200" />
-            <span className="block w-7 h-0.5 bg-oczko-violet-500 mb-1.5 rounded transition-all duration-200" />
-            <span className="block w-7 h-0.5 bg-oczko-violet-500 rounded transition-all duration-200" />
-          </>
+          // Menu button
+          <img src="/images/menu button.svg" alt="Open menu" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(1000%) hue-rotate(240deg) brightness(50%) contrast(100%)' }} />
         )}
       </button>
       {/* Desktop nav */}
       <nav
-        className={`flex gap-4 items-center self-stretch my-auto text-base max-md:hidden`}
+        className={`flex gap-2 items-center self-stretch my-auto text-base max-md:hidden`}
       >
         <a
           href="#about"
@@ -63,37 +57,28 @@ export function Navigation() {
       {/* Mobile nav overlay below navbar */}
       {menuOpen && (
         <div
-          className="absolute left-0 w-full bg-[#F2F1F7] text-oczko-violet-500 z-40 px-6 animate-fade-in md:hidden"
+          className="absolute left-0 w-full bg-[#F2F1F7] text-oczko-violet-500 z-40 px-6 pt-[100px] animate-fade-in md:hidden"
           style={{ top: NAVBAR_HEIGHT, height: `calc(100vh - ${NAVBAR_HEIGHT}px)` }}
         >
           {/* Image */}
-          <img src="/images/knit_tangle.png" alt="Oczko eye" className="w-64 h-64 object-contain mt-12 mb-12 mx-auto" />
+          <img src="/images/oczko_obrazek_menu.png" alt="Oczko eye" className="w-[330px] h-[270px] object-contain mb-[83px] mx-auto" />
           {/* Links */}
           <nav className="flex flex-col w-full gap-8">
-            <a
+            <Link
               href="#about"
-              className="flex items-center justify-between w-full py-4 border-b border-oczko-violet-500 text-lg font-normal tracking-wide"
+              text="O NAS"
               onClick={() => setMenuOpen(false)}
-            >
-              <span>O NAS</span>
-              <span className="text-xl">→</span>
-            </a>
-            <a
+            />
+            <Link
               href="#workshops"
-              className="flex items-center justify-between w-full py-4 border-b border-oczko-violet-500 text-lg font-normal tracking-wide"
+              text="WARSZTATY"
               onClick={() => setMenuOpen(false)}
-            >
-              <span>WARSZTATY</span>
-              <span className="text-xl">→</span>
-            </a>
-            <a
+            />
+            <Link
               href="#contact"
-              className="flex items-center justify-between w-full py-4 border-b border-oczko-violet-500 text-lg font-normal tracking-wide"
+              text="KONTAKT"
               onClick={() => setMenuOpen(false)}
-            >
-              <span>KONTAKT</span>
-              <span className="text-xl">→</span>
-            </a>
+            />
           </nav>
         </div>
       )}

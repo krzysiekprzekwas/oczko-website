@@ -59,3 +59,7 @@ html {
   --color-oczko-green-100: #FAF9EC;
   --color-oczko-orange-400: #F99C89;
 }
+
+h1 {
+  font-size: 34px;
+}
