@@ -26,7 +26,6 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
   const [autoDirection, setAutoDirection] = React.useState(1); // 1 for forward, -1 for backward
   const autoScrollRef = React.useRef<NodeJS.Timeout | null>(null);
   const interactionRef = React.useRef(false);
-  const [progress, setProgress] = React.useState(0); // 0 to 1 for progress ring
   const startX = React.useRef(0);
   const threshold = 50; // Minimum swipe distance
 
@@ -50,30 +49,12 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
     };
   }, [active, images.length, autoDirection]);
 
-  // Progress ring effect for active dot
-  React.useEffect(() => {
-    if (interactionRef.current) return;
-    setProgress(0);
-    let start: number | null = null;
-    let frame: number;
-    const duration = 5000;
-    const animate = (timestamp: number) => {
-      if (!start) start = timestamp;
-      const elapsed = timestamp - start;
-      setProgress(Math.min(elapsed / duration, 1));
-      if (elapsed < duration) {
-        frame = requestAnimationFrame(animate);
-      }
-    };
-    frame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frame);
-  }, [active, autoDirection]);
+
 
   // Helper to handle user interaction and pause auto-scroll
   const handleUserInteraction = (callback: () => void) => {
     interactionRef.current = true;
     if (autoScrollRef.current) clearTimeout(autoScrollRef.current);
-    setProgress(0); // Reset progress ring
     callback();
     setTimeout(() => {
       interactionRef.current = false;
@@ -127,55 +108,29 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
                   key={idx}
                   src={img.src}
                   alt={img.alt}
-                  className="w-full aspect-square object-cover flex-shrink-0"
+                  className="w-full aspect-square object-cover flex-shrink-0 border-r border-[0.5px] border-oczko-stroke"
                   draggable={false}
                 />
               ))}
             </div>
             {/* Navigation dots overlayed on image */}
             <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-2 z-10 pointer-events-none">
-              {images.map((_, idx) => {
-                // Progress ring parameters
-                const size = 24;
-                const stroke = 3;
-                const radius = (size - stroke) / 2;
-                const circumference = 2 * Math.PI * radius;
-                const offset = idx === active ? circumference * (1 - progress) : circumference;
-                return (
-                  <button
-                    key={idx}
-                    className={`relative w-6 h-6 flex items-center justify-center bg-transparent pointer-events-auto`}
-                    style={{ opacity: active === idx ? 1 : 0.4, transition: 'opacity 0.2s' }}
-                    onClick={() => goToSlide(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  >
-                    {/* Progress ring SVG */}
-                    <svg width={size} height={size} className="absolute top-0 left-0" style={{ pointerEvents: 'none' }}>
-                      <circle
-                        cx={size / 2}
-                        cy={size / 2}
-                        r={radius}
-                        fill="none"
-                        stroke="#fff"
-                        strokeWidth={stroke}
-                        opacity={0.5}
-                      />
-                      <circle
-                        cx={size / 2}
-                        cy={size / 2}
-                        r={radius}
-                        fill="none"
-                        stroke="#4C3D93"
-                        strokeWidth={stroke}
-                        strokeDasharray={circumference}
-                        strokeDashoffset={offset}
-                        style={{ transition: idx === active ? 'stroke-dashoffset 0.1s linear' : 'none' }}
-                      />
-                    </svg>
-                    <span className="block w-4 h-4 rounded-full border border-white bg-white/70 z-10" />
-                  </button>
-                );
-              })}
+              {images.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`relative w-6 h-6 flex items-center justify-center bg-transparent pointer-events-auto`}
+                  onClick={() => goToSlide(idx)}
+                  aria-label={`Go to slide ${idx + 1}`}
+                >
+                  {idx === active ? (
+                    // Active dot: filled white circle
+                    <span className="block w-4 h-4 rounded-full bg-oczko-gray-100" />
+                  ) : (
+                    // Inactive dot: white ring outline
+                    <span className="block w-4 h-4 rounded-full border border-[0.5px] border-oczko-gray-100" />
+                  )}
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -188,7 +143,7 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
             key={idx}
             src={img.src}
             alt={img.alt}
-            className="w-1/3 aspect-square object-cover"
+            className="w-1/3 aspect-square object-cover border-r border-oczko-stroke"
           />
         ))}
       </div>

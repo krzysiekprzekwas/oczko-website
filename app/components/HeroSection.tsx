@@ -4,16 +4,16 @@ import { CarouselImage, PhotoCarousel } from "./PhotoCarousel";
 
 const heroImages: CarouselImage[] = [
   {
+    src: "/images/hero_carousel_3.png",
+    alt: "Hero photo 3",
+  },
+  {
     src: "/images/hero_carousel_1.png",
     alt: "Hero photo 1",
   },
   {
     src: "/images/hero_carousel_2.png",
     alt: "Hero photo 2",
-  },
-  {
-    src: "/images/hero_carousel_3.png",
-    alt: "Hero photo 3",
   },
 ];
 
