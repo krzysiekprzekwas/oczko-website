@@ -5,9 +5,10 @@ export function Banner() {
   const textContent = Array.from({ length: 5 }).map((_, idx) => (
     <span
       key={idx}
-      className="inline-block px-10 font-salted"
+      className="inline-block px-10"
     >
-      Knitting is HOT&FUN
+      <span>Knitting is </span>
+      <span className="font-salted">HOT&FUN</span>
     </span>
   ));
 

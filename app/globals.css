@@ -64,3 +64,12 @@ html {
 h1 {
   font-size: 34px;
 }
+
+h2 {
+  font-size: 52px;
+}
+
+/* Global line height for text-base */
+.text-base {
+  line-height: 130%;
+}
