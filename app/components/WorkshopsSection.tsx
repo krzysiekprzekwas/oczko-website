@@ -18,7 +18,7 @@ export function WorkshopsSection() {
                 </p>
               </div>
               <Link
-                href="#workshops-details"
+                href="/workshops"
                 text="Rzuć OCZKIEM na warsztaty"
               />
               <img
@@ -49,7 +49,7 @@ export function WorkshopsSection() {
               </p>
             </div>
             <Link
-              href="#workshops-details"
+              href="/workshops"
               text="Rzuć OCZKIEM na warsztaty"
             />
           </div>

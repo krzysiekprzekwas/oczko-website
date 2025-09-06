@@ -43,7 +43,7 @@ export function AboutSection() {
             </div>
           </div>
           <Link
-            href="#workshops"
+            href="/workshops"
             text="Poznaj spOCZKO typiary"
           />
         </div>

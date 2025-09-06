@@ -28,7 +28,7 @@ export function CofoundersSection() {
                 alt="Hat illustration"
               />
               <Link
-                href="#workshops-details"
+                href="/workshops"
                 text="Rzuć OCZKIEM na warsztaty"
                 color="oczko-orange-500"
               />
@@ -70,7 +70,7 @@ export function CofoundersSection() {
                 alt="Sweater illustration"
               />
               <Link
-                href="#workshops-details"
+                href="/workshops"
                 text="Rzuć OCZKIEM na warsztaty"
                 color="oczko-violet-500"
               />

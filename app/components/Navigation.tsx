@@ -38,7 +38,7 @@ export function Navigation() {
             <span className="self-stretch text-oczko-violet-500">O NAS</span>
           </a>
           <a
-            href="/#workshops"
+            href="/workshops"
             className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-1"
           >
             <span className="self-stretch my-auto text-oczko-violet-500">
@@ -75,7 +75,7 @@ export function Navigation() {
               />
               <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
               <Link
-                href="#workshops"
+                href="/workshops"
                 text="WARSZTATY"
                 onClick={() => setMenuOpen(false)}
               />

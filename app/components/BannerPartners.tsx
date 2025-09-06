@@ -27,7 +27,7 @@ export function BannerPartners({ items }: BannerPartnersProps) {
       `}</style>
       <div className="flex items-center w-full h-full">
         <div className="flex-shrink-0 px-10 font-salted">
-          <span>Zaufali nam: </span>
+          <span className="text-2xl">Zaufali nam: </span>
         </div>
         
         {/* Marquee images section */}
