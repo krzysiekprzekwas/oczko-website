@@ -23,9 +23,9 @@ export function CofoundersSection() {
                 </p>
               </div>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
+                src="/images/hat.png"
                 className="object-contain mt-6 w-full max-w-[270px] h-auto"
-                alt="Workshop illustration"
+                alt="Hat illustration"
               />
               <Link
                 href="#workshops-details"
@@ -36,9 +36,9 @@ export function CofoundersSection() {
         </article>
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/cda9ee308b3101e2336025bc7ba33ed44fe3e906?placeholderIfAbsent=true"
+              src="/images/wera.png"
               className="object-contain w-full"
-              alt="Workshop scene"
+              alt="Wera"
             />
         </div>
       </section>
@@ -46,33 +46,33 @@ export function CofoundersSection() {
       <section className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/cda9ee308b3101e2336025bc7ba33ed44fe3e906?placeholderIfAbsent=true"
+              src="/images/justa.png"
               className="object-contain w-full"
-              alt="Workshop scene"
+              alt="Justa"
             />
         </div>
         <article className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-gray-100 border-[0.5px] border-neutral-800 order-1 md:order-2">
           <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
               <div className="gap-12 self-stretch w-full max-md:max-w-full">
-                <h3 className="text-5xl leading-tight text-oczko-orange-600 font-salted max-md:max-w-full max-md:text-2xl font-salted">
+                <h3 className="text-5xl leading-tight text-oczko-violet-500 font-salted max-md:max-w-full max-md:text-2xl font-salted">
                   Justa
                 </h3>
-                <p className="mt-4 text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
+                <p className="mt-4 text-base font-medium leading-5 text-oczko-violet-500 max-md:max-w-full">
                   Justa kocha dziergać dla innych i obdarowywać znajomych ciepłymi udziergami. Prowadzi swoją małą manufakturę @morze_welny - możecie zbić z nią piątkę na lokalnych targach rękodzieła!
                 </p>
-                <p className="mt-4 text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
+                <p className="mt-4 text-base font-medium leading-5 text-oczko-violet-500 max-md:max-w-full">
                   Justa nauczy dziergać każdego - NAPRAWDĘ! Na warsztatach nie spuści Was z oczka, wytłumaczy każdy etap i pomoże w procesie twórczym!
                 </p>
               </div>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
+                src="/images/sweater.png"
                 className="object-contain mt-6 w-full max-w-[270px] h-auto"
-                alt="Workshop illustration"
+                alt="Sweater illustration"
               />
               <Link
                 href="#workshops-details"
                 text="Rzuć OCZKIEM na warsztaty"
-                color="oczko-orange-500"
+                color="oczko-violet-500"
               />
             </div>
         </article>
