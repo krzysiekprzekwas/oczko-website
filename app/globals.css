@@ -64,10 +64,6 @@ html {
   --color-oczko-stroke: #252527;
 }
 
-h2 {
-  font-size: 52px;
-}
-
 /* Global line height for text-base */
 .text-base {
   line-height: 130%;

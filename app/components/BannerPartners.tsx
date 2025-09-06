@@ -6,11 +6,18 @@ export type PartnerImage = {
   alt?: string;
 };
 
-interface BannerPartnersProps {
-  items: PartnerImage[];
-}
+const defaultPartners: PartnerImage[] = [
+  { src: "/images/przyjeciele_kawy.png", alt: "Przyjaciele kawy" },
+  { src: "/images/yope.png", alt: "Yope" },
+  { src: "/images/salt_wave.png", alt: "Salt Wave" },
+  { src: "/images/eye-1.png", alt: "Eye" },
+  { src: "/images/eye-1.png", alt: "Eye" },
+  { src: "/images/eye-1.png", alt: "Eye" },
+  { src: "/images/eye-1.png", alt: "Eye" },
+  { src: "/images/eye-1.png", alt: "Eye" },
+];
 
-export function BannerPartners({ items }: BannerPartnersProps) {
+export function BannerPartners({ items = defaultPartners }: { items?: PartnerImage[] }) {
   // Create multiple copies of images for seamless marquee effect
   const marqueeImages = [...items, ...items, ...items, ...items, ...items];
 
