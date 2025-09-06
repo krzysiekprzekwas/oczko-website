@@ -3,12 +3,12 @@ import * as React from "react";
 import Link from "./Link";
 
 interface FooterProps {
-  textColor?: string;
+  color?: string;
   backgroundColor?: string;
 }
 
 export function Footer({ 
-  textColor = "oczko-gray-100", 
+  color = "oczko-gray-100", 
   backgroundColor = "oczko-violet-500" 
 }: FooterProps) {
   return (
@@ -17,30 +17,30 @@ export function Footer({
       id="contact"
     >
       {/* Navigation - order 1 on mobile, order 2 on desktop */}
-      <nav className={`order-1 md:order-2 flex flex-col md:flex-row grow shrink self-stretch px-10 py-4 w-full md:w-96 text-xs leading-tight uppercase bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${textColor} max-md:px-5 max-md:max-w-full items-center justify-center md:items-stretch md:justify-start`}>
+      <nav className={`order-1 md:order-2 flex flex-col md:flex-row grow shrink self-stretch px-10 py-4 w-full md:w-96 text-xs leading-tight uppercase bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full items-center justify-center md:items-stretch md:justify-start`}>
         <div className="flex flex-row w-full gap-8 h-full items-center md:items-stretch justify-center md:justify-start">
           <div className="flex flex-col items-center md:items-start w-full md:w-1/2 justify-center">
             <Link
               href="/about"
               text="O nas"
-              color={textColor}
+              color={color}
             />
             <Link
               href="/workshops"
               text="Warsztaty"
-              color={textColor}
+              color={color}
             />
             <Link
               href="/contact"
               text="Kontakt"
-              color={textColor}
+              color={color}
             />
           </div>
           {/* Right column: social links */}
           <div className="flex flex-col items-center md:items-start leading-tight uppercase w-full md:w-1/2 justify-center">
             <div className="self-center md:self-start">
               <div className="flex gap-1 items-center p-2">
-                <span className={`self-stretch my-auto text-${textColor}`}>
+                <span className={`self-stretch my-auto text-${color}`}>
                   Miej na nas oczko
                 </span>
               </div>
@@ -49,24 +49,24 @@ export function Footer({
               <Link
                 href="https://www.instagram.com/oczko.workshops/"
                 text="Instagram"
-                color={textColor}
+                color={color}
               />
               <Link
                 href="https://www.facebook.com/profile.php?id=61567128943041"
                 text="Facebook"
-                color={textColor}
+                color={color}
               />
             </div>
           </div>
         </div>
       </nav>
       {/* Email/contact - order 2 on mobile, order 3 on desktop */}
-      <div className={`order-2 md:order-3 flex flex-col grow shrink justify-center items-center md:items-start self-stretch px-10 py-4 w-full md:w-96 bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${textColor} max-md:px-5 max-md:max-w-full`}>
+      <div className={`order-2 md:order-3 flex flex-col grow shrink justify-center items-center md:items-start self-stretch px-10 py-4 w-full md:w-96 bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full`}>
         <div className="flex flex-col flex-1 justify-center w-full items-center md:items-start text-center md:text-left">
           <div className="flex flex-col flex-1 justify-center w-full text-xs items-center md:items-start text-center md:text-left">
             <div className="flex flex-col w-full items-center md:items-start text-center md:text-left">
               <div className="flex gap-1 items-center self-center md:self-start p-2 leading-tight">
-                <span className={`self-stretch my-auto text-${textColor}`}>
+                <span className={`self-stretch my-auto text-${color}`}>
                   NAPISZ DO NAS
                 </span>
               </div>
@@ -74,7 +74,7 @@ export function Footer({
                 href="mailto:oczko.workshops@gmail.com"
                 className="flex gap-1 items-center self-center md:self-start p-2 w-full underline uppercase whitespace-nowrap justify-center md:justify-start text-center md:text-left"
               >
-                <span className={`self-stretch my-auto underline decoration-auto decoration-solid text-${textColor} underline-offset-auto text-center md:text-left`}>
+                <span className={`self-stretch my-auto underline decoration-auto decoration-solid text-${color} underline-offset-auto text-center md:text-left`}>
                   oczko.workshops@gmail.com
                 </span>
               </a>
@@ -90,7 +90,7 @@ export function Footer({
           alt="OCZKO.WORKSHOPS logo"
         />
         <div className="flex gap-1 items-center self-center p-2 text-xs leading-tight">
-          <span className={`self-stretch my-auto text-${textColor}`}>
+          <span className={`self-stretch my-auto text-${color}`}>
             © 2025 OCZKO.WORKKSHOPS
           </span>
         </div>

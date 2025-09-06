@@ -8,6 +8,7 @@ import { BannerPartners } from "../components/BannerPartners";
 import { PhotoCarousel } from "../components/PhotoCarousel";
 import { WorkshopActivitiesSection } from "./WorkshopActivitiesSection";
 import { B2BSection } from "./B2BSection";
+import { AccessoriesWorkshopsSection } from "./AccessoriesWorkshopsSection";
 
 export default function Workshops() {
   return (
@@ -15,12 +16,12 @@ export default function Workshops() {
       <Navigation />
       <NoodleWorkshopsSection />
       <Banner />
-      <NoodleWorkshopsSection />
+      <AccessoriesWorkshopsSection />
       <BannerPartners />
       <PhotoCarousel />
       <WorkshopActivitiesSection />
       <B2BSection/>
-      <Footer />
+      <Footer backgroundColor="oczko-orange-400" color="oczko-green-100"/>
       <Analytics/>
       <SpeedInsights/>
     </main>

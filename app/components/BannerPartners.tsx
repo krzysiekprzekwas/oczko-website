@@ -10,11 +10,11 @@ const defaultPartners: PartnerImage[] = [
   { src: "/images/przyjeciele_kawy.png", alt: "Przyjaciele kawy" },
   { src: "/images/yope.png", alt: "Yope" },
   { src: "/images/salt_wave.png", alt: "Salt Wave" },
-  { src: "/images/eye-1.png", alt: "Eye" },
-  { src: "/images/eye-1.png", alt: "Eye" },
-  { src: "/images/eye-1.png", alt: "Eye" },
-  { src: "/images/eye-1.png", alt: "Eye" },
-  { src: "/images/eye-1.png", alt: "Eye" },
+  { src: "/images/vigo.png", alt: "Eye" },
+  { src: "/images/gcf.png", alt: "Eye" },
+  { src: "/images/kino_zeglarz.png", alt: "Eye" },
+  { src: "/images/kulturalna.png", alt: "Eye" },
+  { src: "/images/moretalks.png", alt: "Eye" },
 ];
 
 export function BannerPartners({ items = defaultPartners }: { items?: PartnerImage[] }) {
