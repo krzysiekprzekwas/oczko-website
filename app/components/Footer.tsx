@@ -13,7 +13,7 @@ export function Footer() {
         <div className="flex flex-row w-full gap-8 h-full items-center md:items-stretch justify-center md:justify-start">
           <div className="flex flex-col items-center md:items-start w-full md:w-1/2 justify-center">
             <Link
-              href="#about"
+              href="/about"
               text="O nas"
               color="oczko-gray-100"
             />

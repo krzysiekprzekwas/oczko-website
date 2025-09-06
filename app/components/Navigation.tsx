@@ -8,7 +8,7 @@ export function Navigation() {
   return (
     <>
       <header className="sticky top-0 z-50 flex flex-wrap gap-10 justify-between items-center px-10 w-full text-oczko-violet-500 bg-oczko-green-100 border-solid border-[0.5px] border-oczko-stroke min-h-20 max-md:px-5 max-md:max-w-full">
-        <a href="#" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
+        <a href="/" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
           <h1 className="self-stretch my-auto text-oczko-violet-500 font-salted">
             oczko.workshops
           </h1>
@@ -32,7 +32,7 @@ export function Navigation() {
           className={`flex gap-2 items-center self-stretch my-auto text-base max-md:hidden`}
         >
           <a
-            href="#about"
+            href="/about"
             className="flex gap-2 justify-center items-center m-2 self-stretch border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-none"
           >
             <span className="self-stretch text-oczko-violet-500">O NAS</span>
@@ -69,7 +69,7 @@ export function Navigation() {
             {/* Links */}
             <nav className="flex flex-col w-full gap-6 items-start">
               <Link
-                href="#about"
+                href="/about"
                 text="O NAS"
                 onClick={() => setMenuOpen(false)}
               />
