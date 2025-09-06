@@ -28,7 +28,7 @@ export function CTASection() {
         </h2>
 
         <Link
-          href="#contact"
+          href="/contact"
           text="Napisz do nas"
           color="oczko-gray-100"
         />

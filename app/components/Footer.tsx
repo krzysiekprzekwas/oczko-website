@@ -23,7 +23,7 @@ export function Footer() {
               color="oczko-gray-100"
             />
             <Link
-              href="#contact"
+              href="/contact"
               text="Kontakt"
               color="oczko-gray-100"
             />

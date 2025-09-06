@@ -81,7 +81,7 @@ export function Navigation() {
               />
               <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
               <Link
-                href="#contact"
+                href="/contact"
                 text="KONTAKT"
                 onClick={() => setMenuOpen(false)}
               />
