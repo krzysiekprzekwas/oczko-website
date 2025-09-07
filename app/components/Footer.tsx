@@ -9,7 +9,7 @@ interface FooterProps {
 
 export function Footer({ 
   color = "oczko-gray-100", 
-  backgroundColor = "oczko-violet-500" 
+  backgroundColor = "bg-oczko-violet-500" 
 }: FooterProps) {
   return (
     <footer
@@ -17,7 +17,7 @@ export function Footer({
       id="contact"
     >
       {/* Navigation - order 1 on mobile, order 2 on desktop */}
-      <nav className={`order-1 md:order-2 flex flex-col md:flex-row grow shrink self-stretch px-10 py-4 w-full md:w-96 text-xs leading-tight uppercase bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full items-center justify-center md:items-stretch md:justify-start`}>
+      <nav className={`order-1 md:order-2 flex flex-col md:flex-row grow shrink self-stretch px-10 py-4 w-full md:w-96 text-xs leading-tight uppercase ${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full items-center justify-center md:items-stretch md:justify-start`}>
         <div className="flex flex-row w-full gap-8 h-full items-center md:items-stretch justify-center md:justify-start">
           <div className="flex flex-col items-center md:items-start w-full md:w-1/2 justify-center">
             <Link
@@ -61,7 +61,7 @@ export function Footer({
         </div>
       </nav>
       {/* Email/contact - order 2 on mobile, order 3 on desktop */}
-      <div className={`order-2 md:order-3 flex flex-col grow shrink justify-center items-center md:items-start self-stretch px-10 py-4 w-full md:w-96 bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full`}>
+      <div className={`order-2 md:order-3 flex flex-col grow shrink justify-center items-center md:items-start self-stretch px-10 py-4 w-full md:w-96 ${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 text-${color} max-md:px-5 max-md:max-w-full`}>
         <div className="flex flex-col flex-1 justify-center w-full items-center md:items-start text-center md:text-left">
           <div className="flex flex-col flex-1 justify-center w-full text-xs items-center md:items-start text-center md:text-left">
             <div className="flex flex-col w-full items-center md:items-start text-center md:text-left">
@@ -83,7 +83,7 @@ export function Footer({
         </div>
       </div>
       {/* Logo - order 3 on mobile, order 1 on desktop */}
-      <div className={`order-3 md:order-1 flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 w-full md:w-96 bg-${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full`}>
+      <div className={`order-3 md:order-1 flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 w-full md:w-96 ${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full`}>
         <img
           src="/images/full_logo_white.png"
           className="object-contain max-w-full aspect-[1.47] w-[118px] p-2"
