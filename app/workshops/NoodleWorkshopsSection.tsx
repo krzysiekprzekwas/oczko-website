@@ -14,35 +14,41 @@ export function NoodleWorkshopsSection() {
             />
         </div>
         <article className="w-full md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-gray-100 border-[0.5px] border-neutral-800">
-            <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
-              <div className="gap-12 self-stretch w-full max-md:max-w-full">
-                <h1 className="text-7xl leading-tight text-oczko-orange-600 font-salted max-md:max-w-full font-salted">
-                  Warsztaty
-                </h1>
-                <h3 className="text-5xl leading-tight text-oczko-orange-600 font-salted max-md:max-w-full max-md:text-2xl font-salted">
-                  Noodle Scarf
-                </h3>
-                <p className="mt-4 text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
-                  Co bedziemy dziergać?
-                </p>
-                <p className="mt-4 text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
-                Noodle scarf czyli cienki, kolorowy szaliczek, który jest idealny na początek dziewiarskiej przygody w którą, mamy nadzieję, wkręcisz się na całego! 
-                </p>
-                <p className="mt-4 text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
-                  To idealny dodatek do garderoby, który doda szczypty Ciebie w każdej stylizacji! 
-                  Wykonany z prawdziwej wełny, alpaki, moheru i merino oraz w kolorach, które najbardziej do Ciebie przemawiają!
-                </p>
+            <div className="flex flex-col flex-1 shrink items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
+              <div className="flex flex-col gap-6 self-stretch w-full max-md:max-w-full">
+                <div className="flex flex-col gap-12">
+                  <h1 className="text-7xl leading-tight text-oczko-orange-600 font-salted max-md:max-w-full font-salted">
+                    Warsztaty
+                  </h1>
+                  <h3 className="text-5xl leading-tight text-oczko-orange-600 font-salted max-md:max-w-full max-md:text-2xl font-salted">
+                    Noodle Scarf
+                  </h3>
+                </div>
+                <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-6">
+                    <p className="text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
+                      CO BEDZIEMY DZIERGAĆ?
+                    </p>
+                    <p className="text-base font-medium leading-5 text-oczko-orange-500 max-md:max-w-full">
+                      Noodle scarf czyli cienki, kolorowy szaliczek, który jest idealny na początek dziewiarskiej przygody w którą, mamy nadzieję, wkręcisz się na całego! 
+                      <br/>
+                      <br/>
+                      To idealny dodatek do garderoby, który doda szczypty Ciebie w każdej stylizacji! 
+                      Wykonany z prawdziwej wełny, alpaki, moheru i merino oraz w kolorach, które najbardziej do Ciebie przemawiają!
+                    </p>
+                  </div>
+                  <img
+                    src="/images/eye_hearth.png"
+                    className="object-contain mt-6 w-full max-w-[80px] h-auto mx-auto"
+                    alt="Eye Heart"
+                  />
+                  <Link
+                    href="/contact"
+                    text="Napisz do nas"
+                    color="oczko-orange-500"
+                  />
+                </div>
               </div>
-              <img
-                src="/images/eye_hearth.png"
-                className="object-contain mt-6 w-full max-w-[80px] h-auto"
-                alt="Eye Heart"
-              />
-              <Link
-                href="/contact"
-                text="Napisz do nas"
-                color="oczko-orange-500"
-              />
             </div>
         </article>
       </section>
