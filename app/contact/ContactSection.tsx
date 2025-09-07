@@ -10,18 +10,17 @@ export function ContactSection() {
             <div className="flex flex-col flex-1 shrink gap-8 items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
               <div className="flex flex-col gap-8 self-stretch w-full max-md:max-w-full">
                 <div className="flex flex-col gap-12">
-                  <h1 className="text-7xl leading-tight text-oczko-violet-500 font-salted max-md:max-w-full font-salted">
+                  <h1 className="text-7xl uppercase leading-tight text-oczko-violet-500 font-salted max-md:max-w-full font-salted">
                     Kontakt
                   </h1>
                   <p className="text-base font-medium leading-5 text-oczko-violet-500 max-md:max-w-full">
-                    Masz do nas pytanie? A może chcesz dowiedzieć 
+                    Masz do nas pytanie?
+                    <br/>A może chcesz dowiedzieć się więcej o ofercie?
                     <br/>
-                    się więcej o ofercie?
                     <br/>
+                    Napisz do nas na oczko.workshops@gmail.com, 
                     <br/>
-                    Napisz do nas na oczko.workshops@gmail.com a 
-                    <br/>
-                    my odpowiemy w mgnieniu OCZKA!
+                    a my odpowiemy w mgnieniu OCZKA!
                   </p>
                 </div>
                 <div className="flex flex-col gap-12">

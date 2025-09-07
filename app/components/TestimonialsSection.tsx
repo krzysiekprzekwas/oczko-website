@@ -11,7 +11,7 @@ export function TestimonialsSection() {
             <h2 className="text-5xl leading-tight text-oczko-violet-500 max-md:max-w-full max-md:text-4xl font-salted">
               Co mówią o oczku?
             </h2>
-            <p className="self-center mt-12 text-base font-medium leading-5 text-oczko-violet-600 w-[840px] max-md:mt-10 max-md:max-w-full">
+            <p className="self-center mt-12 text-base font-medium leading-5 text-oczko-violet-500 w-[840px] max-md:mt-10 max-md:max-w-full">
               Każde spotkanie to masa dobrej energii, śmiechu i oczywiście dziergania. Cieszymy się, że nasze warsztaty zostawiają po sobie nie tylko piękne robótki, ale i świetne wspomnienia. Zobacz, co mówią o nas osoby, które już z nami dziergały!
             </p>
           </div>

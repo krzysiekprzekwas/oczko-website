@@ -37,10 +37,10 @@ export function AboutSection() {
             </div>
             <div className="gap-8 mt-12 w-full max-md:mt-10">
               <h3 className="text-2xl leading-tight text-oczko-violet-500 font-salted text-center">
-                Nasz statement?
+                NASZ STATEMENT?
               </h3>
-              <p className="mt-8 text-base font-medium leading-[130%] text-oczko-violet-500">
-                KNITTING IS HOT & FUN! i każdy, niezależnie od poziomu umiejętności manualnych, może odnaleźć ZEN w przerabianiu oczek i tworzeniu udziergu własnymi rękami.
+              <p className="mt-8 text-base font-medium leading-[130%] text-oczko-violet-500 text-center">
+                <span className="font-semibold">KNITTING IS HOT & FUN!</span> i każdy, niezależnie od poziomu umiejętności manualnych, może odnaleźć ZEN w przerabianiu oczek i tworzeniu udziergu własnymi rękami.
               </p>
             </div>
           </div>

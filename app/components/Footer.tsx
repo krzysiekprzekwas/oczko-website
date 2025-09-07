@@ -24,16 +24,19 @@ export function Footer({
               href="/about"
               text="O nas"
               color={color}
+              fontSize="text-xs"
             />
             <Link
               href="/workshops"
               text="Warsztaty"
               color={color}
+              fontSize="text-xs"
             />
             <Link
               href="/contact"
               text="Kontakt"
               color={color}
+              fontSize="text-xs"
             />
           </div>
           {/* Right column: social links */}
@@ -50,11 +53,13 @@ export function Footer({
                 href="https://www.instagram.com/oczko.workshops/"
                 text="Instagram"
                 color={color}
+                fontSize="text-xs"
               />
               <Link
                 href="https://www.facebook.com/profile.php?id=61567128943041"
                 text="Facebook"
                 color={color}
+                fontSize="text-xs"
               />
             </div>
           </div>
