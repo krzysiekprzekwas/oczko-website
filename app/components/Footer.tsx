@@ -78,6 +78,11 @@ export function Footer({
                   oczko.workshops@gmail.com
                 </span>
               </a>
+              <div className="flex gap-1 items-center self-center md:self-start p-2 text-xs leading-tight">
+                <span className={`self-stretch my-auto text-${color}`}>
+                  © 2025 OCZKO.WORKKSHOPS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -85,15 +90,10 @@ export function Footer({
       {/* Logo - order 3 on mobile, order 1 on desktop */}
       <div className={`order-3 md:order-1 flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 w-full md:w-96 ${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full`}>
         <img
-          src="/images/full_logo_white.png"
+          src={backgroundColor === "bg-oczko-violet-200" ? "/images/full_logo_black.png" : "/images/full_logo_white.png"}
           className="object-contain max-w-full aspect-[1.47] w-[118px] p-2"
           alt="OCZKO.WORKSHOPS logo"
         />
-        <div className="flex gap-1 items-center self-center p-2 text-xs leading-tight">
-          <span className={`self-stretch my-auto text-${color}`}>
-            © 2025 OCZKO.WORKKSHOPS
-          </span>
-        </div>
       </div>
     </footer>
   );

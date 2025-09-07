@@ -70,3 +70,19 @@ html {
 .text-base {
   line-height: 130%;
 }
+/* Safelist dynamic color classes to ensure they're included in the build */
+@layer utilities {
+  .text-oczko-violet-100 { color: var(--color-oczko-violet-100); }
+  .text-oczko-violet-200 { color: var(--color-oczko-violet-200); }
+  .text-oczko-violet-300 { color: var(--color-oczko-violet-300); }
+  .text-oczko-violet-500 { color: var(--color-oczko-violet-500); }
+  .text-oczko-violet-600 { color: var(--color-oczko-violet-600); }
+  .text-oczko-gray-100 { color: var(--color-oczko-gray-100); }
+  .text-oczko-green-100 { color: var(--color-oczko-green-100); }
+  .text-oczko-green-300 { color: var(--color-oczko-green-300); }
+  .text-oczko-green-500 { color: var(--color-oczko-green-500); }
+  .text-oczko-green-1000 { color: var(--color-oczko-green-1000); }
+  .text-oczko-orange-400 { color: var(--color-oczko-orange-400); }
+  .text-oczko-orange-500 { color: var(--color-oczko-orange-500); }
+  .text-oczko-orange-600 { color: var(--color-oczko-orange-600); }
+}

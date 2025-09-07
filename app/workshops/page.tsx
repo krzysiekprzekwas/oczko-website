@@ -21,7 +21,7 @@ export default function Workshops() {
       <PhotoCarousel />
       <WorkshopActivitiesSection />
       <B2BSection/>
-      <Footer backgroundColor="oczko-orange-400" color="oczko-green-100"/>
+      <Footer backgroundColor="bg-oczko-orange-400" color="oczko-green-1000"/>
       <Analytics/>
       <SpeedInsights/>
     </main>

@@ -15,7 +15,7 @@ export default function Contact() {
       <BannerPartners/>
       <CTASection backgroundColor="bg-oczko-green-500" />
       <Banner />
-      <Footer backgroundColor="bg-oczko-violet-200" color="bg-oczko-green-1000"/>
+      <Footer backgroundColor="bg-oczko-violet-200" color="oczko-green-1000"/>
       <Analytics/>
       <SpeedInsights/>
     </main>
