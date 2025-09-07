@@ -6,6 +6,7 @@ interface LinkProps {
   text: string;
   color?: string;
   onClick?: () => void;
+  isActive?: boolean;
 }
 
 const Link: React.FC<LinkProps> = ({
@@ -13,6 +14,7 @@ const Link: React.FC<LinkProps> = ({
   text,
   color = "oczko-violet-500",
   onClick,
+  isActive = false,
 }) => {
   return (
     <a
@@ -20,7 +22,7 @@ const Link: React.FC<LinkProps> = ({
       onClick={onClick}
       className={`flex gap-1 md:gap-2 justify-center items-center p-2 text-xs md:text-sm leading-tight text-${color} uppercase group hover:gap-2 md:hover:gap-3 transition-all duration-200`}
     >
-      <span className={`self-stretch my-auto text-${color} group-hover:underline transition-all duration-200`}>
+      <span className={`self-stretch my-auto text-${color} ${isActive ? 'underline' : 'group-hover:underline'} transition-all duration-200`}>
         {text}
       </span>
       <ArrowRight

@@ -1,9 +1,11 @@
 "use client";
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import Link from "./Link";
 
 export function Navigation() {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const pathname = usePathname();
   
   return (
     <>
@@ -33,13 +35,21 @@ export function Navigation() {
         >
           <a
             href="/about"
-            className="flex gap-2 justify-center items-center m-2 self-stretch border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-none"
+            className={`flex gap-2 justify-center items-center m-2 self-stretch border-b-1 transition-all duration-200 leading-none ${
+              pathname === '/about' 
+                ? 'border-oczko-violet-500' 
+                : 'border-transparent hover:border-oczko-violet-500'
+            }`}
           >
             <span className="self-stretch text-oczko-violet-500">O NAS</span>
           </a>
           <a
             href="/workshops"
-            className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-1"
+            className={`flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 transition-all duration-200 leading-1 ${
+              pathname === '/workshops' 
+                ? 'border-oczko-violet-500' 
+                : 'border-transparent hover:border-oczko-violet-500'
+            }`}
           >
             <span className="self-stretch my-auto text-oczko-violet-500">
               WARSZTATY
@@ -47,7 +57,11 @@ export function Navigation() {
           </a>
           <a
             href="/contact"
-            className="flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-1"
+            className={`flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 transition-all duration-200 leading-1 ${
+              pathname === '/contact' 
+                ? 'border-oczko-violet-500' 
+                : 'border-transparent hover:border-oczko-violet-500'
+            }`}
           >
             <span className="self-stretch my-auto text-oczko-violet-500">
               KONTAKT
@@ -72,18 +86,21 @@ export function Navigation() {
                 href="/about"
                 text="O NAS"
                 onClick={() => setMenuOpen(false)}
+                isActive={pathname === '/about'}
               />
               <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
               <Link
                 href="/workshops"
                 text="WARSZTATY"
                 onClick={() => setMenuOpen(false)}
+                isActive={pathname === '/workshops'}
               />
               <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
               <Link
                 href="/contact"
                 text="KONTAKT"
                 onClick={() => setMenuOpen(false)}
+                isActive={pathname === '/contact'}
               />
               <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
             </nav>
