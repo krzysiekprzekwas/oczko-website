@@ -57,7 +57,7 @@ export function NoodleWorkshopsSection() {
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
             <img
               src="/images/noodle_workshop_3.png"
-              className="object-contain max-w-[480px] h-auto"
+              className="object-contain max-w-[480px] h-auto animate-[spin_5.5s_linear_infinite]"
               alt="Workshops"
             />
         </div>
