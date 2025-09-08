@@ -22,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Syne', Arial, Helvetica, sans-serif;
+  font-family: var(--font-syne), Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -33,13 +33,6 @@ html {
   font-family: var(--font-salted), Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-  font-family: 'Syne';
-  src: url('/fonts/Syne-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme {
   --color-oczko-violet-100: #E9E8F2;

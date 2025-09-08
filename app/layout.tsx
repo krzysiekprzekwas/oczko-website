@@ -24,6 +24,15 @@ const salted = localFont({
   style: "normal",
 });
 
+const syne = localFont({
+  src: "../public/fonts/Syne-VariableFont_wght.ttf",
+  variable: "--font-syne",
+  display: "swap",
+  weight: "100 900",
+  style: "normal",
+  fallback: ["Arial", "Helvetica", "sans-serif"],
+});
+
 export const metadata: Metadata = {
   title: "OCZKO.workshops",
   description: "Warsztaty dziewiastwa i szydełkowania",
@@ -60,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${salted.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${salted.variable} ${syne.variable} antialiased`}
       >
         <main>
           <Navigation />
