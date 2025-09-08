@@ -95,7 +95,7 @@ export function Footer({
       {/* Logo - order 3 on mobile, order 1 on desktop */}
       <div className={`order-3 md:order-1 flex flex-col grow shrink justify-center items-center self-stretch px-10 py-4 w-full md:w-96 ${backgroundColor} border-solid border-[0.5px] border-neutral-800 min-h-40 min-w-60 max-md:px-5 max-md:max-w-full`}>
         <img
-          src={backgroundColor === "bg-oczko-violet-200" ? "/images/full_logo_black.png" : "/images/full_logo_white.png"}
+          src={(backgroundColor === "bg-oczko-violet-200" || backgroundColor === "bg-oczko-orange-400") ? "/images/full_logo_black.png" : "/images/full_logo_white.png"}
           className="object-contain max-w-full aspect-[1.47] w-[118px] p-2"
           alt="OCZKO.WORKSHOPS logo"
         />

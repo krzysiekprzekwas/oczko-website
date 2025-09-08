@@ -6,14 +6,14 @@ export function NoodleWorkshopsSection() {
   return (
     <>
       <section id="cofounders" className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center border-[0.5px] border-neutral-800">
             <img
               src="/images/noodle_workshop_1.png"
               className="object-contain w-full"
               alt="Workshops"
             />
         </div>
-        <article className="w-full md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-gray-100 border-[0.5px] border-neutral-800">
+        <article className="w-full md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
             <div className="flex flex-col flex-1 shrink items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
               <div className="flex flex-col gap-6 self-stretch w-full max-md:max-w-full">
                 <div className="flex flex-col gap-12">

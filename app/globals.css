@@ -45,6 +45,7 @@ html {
   --color-oczko-green-300: #E9E7B4;
   --color-oczko-green-500: #C9C344;
   --color-oczko-green-1000: #28270F;
+  --color-oczko-orange-100: #FEEDEA;
   --color-oczko-orange-200: #FDDED8;
   --color-oczko-orange-400: #F99C89;
   --color-oczko-orange-500: #F77B62;
@@ -68,6 +69,8 @@ html {
   .text-oczko-green-300 { color: var(--color-oczko-green-300); }
   .text-oczko-green-500 { color: var(--color-oczko-green-500); }
   .text-oczko-green-1000 { color: var(--color-oczko-green-1000); }
+  .text-oczko-orange-100 { color: var(--color-oczko-orange-100); }
+  .text-oczko-orange-200 { color: var(--color-oczko-orange-200); }
   .text-oczko-orange-400 { color: var(--color-oczko-orange-400); }
   .text-oczko-orange-500 { color: var(--color-oczko-orange-500); }
   .text-oczko-orange-600 { color: var(--color-oczko-orange-600); }
