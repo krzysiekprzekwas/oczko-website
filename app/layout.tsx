@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -13,6 +14,14 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const salted = localFont({
+  src: "../public/fonts/fonnts.com-Salted_Regular.otf",
+  variable: "--font-salted",
+  display: "swap",
+  weight: "400",
+  style: "normal",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${salted.variable} antialiased`}
       >
         <main>
           <Navigation />

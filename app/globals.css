@@ -29,16 +29,8 @@ html {
   scroll-padding-top: 5rem;
 }
 
-@font-face {
-  font-family: 'Salted';
-  src: url('/fonts/fonnts.com-Salted_Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .font-salted {
-  font-family: 'Salted', Arial, Helvetica, sans-serif;
+  font-family: var(--font-salted), Arial, Helvetica, sans-serif;
 }
 
 @font-face {
