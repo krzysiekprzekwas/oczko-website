@@ -15,6 +15,29 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "OCZKO.workshops",
   description: "Warsztaty dziewiastwa i szydełkowania",
+  metadataBase: new URL("https://www.oczkoworkshops.pl"),
+  openGraph: {
+    title: "OCZKO.workshops",
+    description: "Warsztaty dziewiastwa i szydełkowania",
+    url: "https://www.oczkoworkshops.pl",
+    siteName: "OCZKO.workshops",
+    images: [
+      {
+        url: "/images/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "OCZKO.workshops hero image",
+      },
+    ],
+    locale: "pl_PL",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OCZKO.workshops",
+    description: "Warsztaty dziewiastwa i szydełkowania",
+    images: ["/images/hero.png"],
+  },
 };
 
 export default function RootLayout({
