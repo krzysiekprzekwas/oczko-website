@@ -15,13 +15,13 @@ import { BannerPartners } from "./components/BannerPartners";
 
 const items: BannerItem[] = [
   { type: "text", value: "DZIERGANIE" },
-  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "image", src: "/images/logo_eye_violet.png", alt: "Eye" },
   { type: "text", value: "SPOTKANIA" },
-  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "image", src: "/images/logo_eye_violet.png", alt: "Eye" },
   { type: "text", value: "WARSZTATY" },
-  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "image", src: "/images/logo_eye_violet.png", alt: "Eye" },
   { type: "text", value: "ZABAWA" },
-  { type: "image", src: "/images/eye-1.png", alt: "Eye" },
+  { type: "image", src: "/images/logo_eye_violet.png", alt: "Eye" },
 ];
 
 export default function Home() {

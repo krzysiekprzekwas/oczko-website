@@ -23,10 +23,10 @@ export function HeroSection() {
       <div className="block md:hidden">
         <PhotoCarousel images={heroImages}/>
       </div>
-      <div className="hidden md:block relative w-full">
+      <div className="hidden md:block relative w-full md:h-[85vh]">
         <img
           src="/images/hero.png"
-          className="object-contain w-full max-md:max-w-full block"
+          className="object-cover w-full h-full max-md:max-w-full block"
           alt="Hero image showcasing knitting workshops"
         />
         <h1
