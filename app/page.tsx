@@ -1,4 +1,3 @@
-import { Navigation } from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { PhotoCarousel } from "./components/PhotoCarousel";
@@ -26,8 +25,7 @@ const items: BannerItem[] = [
 
 export default function Home() {
   return (
-    <main>
-      <Navigation />
+    <>
       <HeroSection />
       <BannerWithImages items={items} />
       <AboutSection />
@@ -46,8 +44,6 @@ export default function Home() {
       <CTASection />
       <SocialsSection />
       <Footer />
-      <Analytics/>
-      <SpeedInsights/>
-    </main>
+    </>
   );
 }
