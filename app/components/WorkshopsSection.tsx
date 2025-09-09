@@ -1,6 +1,12 @@
 "use client";
 import * as React from "react";
 import Link from "./Link";
+import { HeroCarousel, HeroCarouselImage } from "./HeroCarousel";
+
+const heroImages: HeroCarouselImage[] = [
+  { src: "/images/workshops_section_1.png", alt: "Hero image 1" },
+  { src: "/images/workshops_section_2.png", alt: "Hero image 2" },
+];
 
 export function WorkshopsSection() {
   return (
@@ -31,11 +37,7 @@ export function WorkshopsSection() {
             </div>
         </article>
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/cda9ee308b3101e2336025bc7ba33ed44fe3e906?placeholderIfAbsent=true"
-              className="object-contain w-full"
-              alt="Workshop scene"
-            />
+            <HeroCarousel images={heroImages} />
         </div>
       </section>
 
