@@ -11,9 +11,9 @@ export function Navigation() {
     <>
       <header className="sticky top-0 z-50 flex flex-wrap gap-10 justify-between items-center px-10 w-full text-oczko-violet-500 bg-oczko-green-100 border-solid border-[0.5px] border-oczko-stroke min-h-20 max-md:px-5 max-md:max-w-full">
         <a href="/" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
-          <h1 className="self-stretch my-auto text-oczko-violet-500 font-salted">
+          <span className="self-stretch my-auto text-oczko-violet-500 font-salted">
             oczko.workshops
-          </h1>
+          </span>
         </a>
         {/* Hamburger/Close button for mobile */}
         <button
