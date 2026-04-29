@@ -1,5 +1,4 @@
-"use client";
-import * as React from "react";
+import React from "react";
 
 export type BannerItem =
   | { type: "text"; value: string }
