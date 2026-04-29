@@ -1,5 +1,5 @@
-"use client";
-import * as React from "react";
+import React from "react";
+import Image from "next/image";
 import Link from "./Link";
 import { HeroCarousel, HeroCarouselImage } from "./HeroCarousel";
 
@@ -29,8 +29,10 @@ export function WorkshopsSection() {
                 href="/workshops"
                 text="Rzuć OCZKIEM na warsztaty"
               />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/d942388158c7929b5b051716be30e43c1c133c68?placeholderIfAbsent=true"
+              <Image
+                src="/images/workshops_illustration.png"
+                width={540}
+                height={504}
                 className="object-contain mt-6 w-full max-w-[270px] h-auto"
                 alt="Workshop illustration"
               />
@@ -63,8 +65,10 @@ export function WorkshopsSection() {
         </article>
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
           <div className="w-full h-full px-32 py-48 max-md:px-5 max-md:py-24 flex items-center justify-center">
-            <img
-              src="./images/eye_hearth_3.png"
+            <Image
+              src="/images/eye_hearth_3.png"
+              width={480}
+              height={374}
               className="object-contain w-full max-md:max-w-full"
               alt="Workshop materials"
             />

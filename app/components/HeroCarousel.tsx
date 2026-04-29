@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 
 export type HeroCarouselImage = {
   src: string;
@@ -56,12 +57,14 @@ export function HeroCarousel({ images = defaultHeroImages }: { images?: HeroCaro
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {images.map((img, idx) => (
-            <div key={idx} className="min-w-full w-full h-full flex-shrink-0 bg-black">
-              <img
+            <div key={idx} className="relative min-w-full w-full h-full flex-shrink-0 bg-black">
+              <Image
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover object-center block"
-                style={{ imageRendering: 'auto' }}
+                fill
+                className="object-cover object-center"
+                priority={idx === 0}
+                sizes="100vw"
                 draggable={false}
               />
             </div>

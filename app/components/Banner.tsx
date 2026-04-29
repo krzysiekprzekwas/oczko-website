@@ -1,5 +1,4 @@
-"use client";
-import * as React from "react";
+import React from "react";
 
 export function Banner() {
   const textContent = Array.from({ length: 5 }).map((_, idx) => (

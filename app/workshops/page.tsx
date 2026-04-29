@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Footer } from "../components/Footer";
 import { Banner } from "../components/Banner";
 import { NoodleWorkshopsSection } from "./NoodleWorkshopsSection";
@@ -6,6 +7,16 @@ import { CarouselImage, PhotoCarousel } from "../components/PhotoCarousel";
 import { WorkshopActivitiesSection } from "./WorkshopActivitiesSection";
 import { B2BSection } from "./B2BSection";
 import { AccessoriesWorkshopsSection } from "./AccessoriesWorkshopsSection";
+
+export const metadata: Metadata = {
+  title: "Warsztaty | OCZKO.workshops",
+  description: "Noodle Scarf, SpOCZKO akcesoria i warsztaty B2B — znajdź warsztat dla siebie. Nauka dziergania i szydełkowania dla każdego poziomu zaawansowania.",
+  openGraph: {
+    title: "Warsztaty | OCZKO.workshops",
+    description: "Noodle Scarf, SpOCZKO akcesoria i warsztaty B2B — znajdź warsztat dla siebie.",
+    url: "https://www.oczkoworkshops.pl/workshops",
+  },
+};
 
 const workshopsImages: CarouselImage[] = [
   {

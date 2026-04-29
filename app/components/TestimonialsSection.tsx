@@ -1,5 +1,5 @@
-"use client";
-import * as React from "react";
+import React from "react";
+import Image from "next/image";
 import Link from "./Link";
 
 export function TestimonialsSection() {
@@ -16,20 +16,29 @@ export function TestimonialsSection() {
             </p>
           </div>
           <div className="flex flex-wrap gap-10 items-center mt-12 w-full max-md:mt-10 max-md:max-w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/94132469c2b39d356d704741ababe979e5262d40?placeholderIfAbsent=true"
-              className="object-contain grow shrink self-stretch my-auto aspect-[1.55] min-w-60 w-[364px] max-md:max-w-full"
+            <Image
+              src="/images/testimonial_1.png"
+              width={872}
+              height={562}
+              className="object-contain grow shrink self-stretch my-auto min-w-60 max-md:max-w-full"
               alt="Customer testimonial 1"
+              sizes="(max-width: 768px) 100vw, 364px"
             />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/a6eb18953393286aa3ac16727b306631385fe6a2?placeholderIfAbsent=true"
-              className="object-contain grow shrink self-stretch my-auto aspect-[2.51] min-w-60 w-[287px]"
+            <Image
+              src="/images/testimonial_2.png"
+              width={718}
+              height={286}
+              className="object-contain grow shrink self-stretch my-auto min-w-60"
               alt="Customer testimonial 2"
+              sizes="(max-width: 768px) 100vw, 287px"
             />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/2f19e033450539a9511f56388497ce2398938a0f?placeholderIfAbsent=true"
-              className="object-contain grow shrink self-stretch my-auto aspect-[2.93] min-w-60 w-[362px] max-md:max-w-full"
+            <Image
+              src="/images/testimonial_3.png"
+              width={868}
+              height={297}
+              className="object-contain grow shrink self-stretch my-auto min-w-60 max-md:max-w-full"
               alt="Customer testimonial 3"
+              sizes="(max-width: 768px) 100vw, 362px"
             />
           </div>
         </div>

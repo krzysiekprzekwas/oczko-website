@@ -1,5 +1,5 @@
-"use client";
-import * as React from "react";
+import React from "react";
+import Image from "next/image";
 import Link from "./Link";
 
 export function SocialsSection() {
@@ -22,10 +22,13 @@ export function SocialsSection() {
                 Śledź nas na Instagramie, by być na bieżąco!
               </p>
             </div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/bcf9f0d5781a42d0990f584b23abfb2f/415080a520affc949ce2a0234de35c3e4eb0eb8f?placeholderIfAbsent=true"
-              className="object-contain self-center mt-12 max-w-full aspect-square w-[366px] max-md:mt-10"
+            <Image
+              src="/images/socials_open_knitting.png"
+              width={732}
+              height={731}
+              className="object-contain self-center mt-12 max-w-full max-md:mt-10"
               alt="Open knitting event"
+              sizes="(max-width: 768px) 100vw, 366px"
             />
           </div>
           <div className="flex gap-8 items-center self-center text-xs leading-tight text-oczko-violet-500 uppercase whitespace-nowrap max-md:mt-10">

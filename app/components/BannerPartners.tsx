@@ -1,5 +1,5 @@
-"use client";
-import * as React from "react";
+import React from "react";
+import Image from "next/image";
 
 export type PartnerImage = {
   src: string;
@@ -41,11 +41,13 @@ export function BannerPartners({ items = defaultPartners }: { items?: PartnerIma
         <div className="marquee whitespace-nowrap flex items-center flex-1 overflow-hidden">
           <div className="marquee-container flex">
             {marqueeImages.map((image, idx) => (
-              <img
+              <Image
                 key={`img-${idx}`}
                 src={image.src}
                 alt={image.alt || ""}
-                className="inline-block h-10 mx-4 align-middle"
+                width={200}
+                height={80}
+                className="inline-block h-10 w-auto mx-4 align-middle object-contain"
                 draggable={false}
               />
             ))}

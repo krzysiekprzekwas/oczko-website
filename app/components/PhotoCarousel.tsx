@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 
 export type CarouselImage = {
   src: string;
@@ -104,13 +105,19 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
               style={{ transform: `translateX(-${active * 100}%)` }}
             >
               {images.map((img, idx) => (
-                <img
+                <div
                   key={idx}
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full aspect-square object-cover flex-shrink-0 border-r border-[0.5px] border-oczko-stroke"
-                  draggable={false}
-                />
+                  className="relative min-w-full aspect-square flex-shrink-0 border-r border-[0.5px] border-oczko-stroke"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    draggable={false}
+                  />
+                </div>
               ))}
             </div>
             {/* Navigation dots overlayed on image */}
@@ -139,12 +146,15 @@ export function PhotoCarousel({ images = defaultImages }: { images?: CarouselIma
       {/* Desktop: Static row */}
       <div className="hidden md:flex flex-row w-full">
         {images.map((img, idx) => (
-          <img
-            key={idx}
-            src={img.src}
-            alt={img.alt}
-            className="w-1/3 aspect-square object-cover border-r border-oczko-stroke"
-          />
+          <div key={idx} className="relative w-1/3 aspect-square border-r border-oczko-stroke">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover"
+              sizes="33vw"
+            />
+          </div>
         ))}
       </div>
     </>
