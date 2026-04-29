@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "./Link";
 
 export function AboutSection() {
@@ -8,11 +9,15 @@ export function AboutSection() {
       id="about"
     >
       <div className="flex-1 flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 max-md:hidden">
-        <img
-          src="/images/surfer.png"
-          className="object-contain aspect-[0.71] w-full max-w-[509px]"
-          alt="Portrait of OCZKO workshop organizers"
-        />
+        <div className="relative w-full max-w-[509px] aspect-[510/718]">
+          <Image
+            src="/images/surfer.png"
+            fill
+            className="object-contain"
+            alt="Portrait of OCZKO workshop organizers"
+            sizes="(max-width: 768px) 0px, 50vw"
+          />
+        </div>
       </div>
       <article className="flex-1 flex flex-col justify-center items-center bg-white max-md:bg-oczko-violet-100 border-[0.5px] border-neutral-800">
         <div className="flex flex-col gap-8 px-10 py-16">
@@ -28,9 +33,11 @@ export function AboutSection() {
                   z innymi.
                 </p>
               </div>
-              <img
+              <Image
                 src="/images/eye-1.png"
-                className="object-contain self-center mt-12 max-w-full aspect-square w-[124px] max-md:mt-10"
+                width={124}
+                height={124}
+                className="object-contain self-center mt-12 max-md:mt-10"
                 alt="OCZKO logo"
               />
             </div>

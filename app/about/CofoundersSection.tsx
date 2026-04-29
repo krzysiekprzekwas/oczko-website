@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "../components/Link";
 
 export function CofoundersSection() {
@@ -21,8 +22,10 @@ export function CofoundersSection() {
                   Podczas spOCZKO warsztatów Wera wspiera dobrym słowem, pomaga tam, gdzie spadnie OCZKO i dba o to, by nikt przesadnie się nie stresował - bo dzierganie to przede wszystkim dobra zabawa!
                 </p>
               </div>
-              <img
+              <Image
                 src="/images/hat.png"
+                width={270}
+                height={252}
                 className="block sm:hidden lg:block object-contain min-[1326px]:mt-6 w-full max-w-[135px] min-[1326px]:max-w-[270px] h-auto"
                 alt="Hat illustration"
               />
@@ -33,22 +36,26 @@ export function CofoundersSection() {
               />
             </div>
         </article>
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
-            <img
-              src="/images/wera.png"
-              className="object-contain w-full"
-              alt="Wera"
-            />
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square relative flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
+          <Image
+            src="/images/wera.png"
+            fill
+            className="object-contain"
+            alt="Wera"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </section>
 
       <section className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
-            <img
-              src="/images/justa.png"
-              className="object-contain w-full"
-              alt="Justa"
-            />
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square relative flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
+          <Image
+            src="/images/justa.png"
+            fill
+            className="object-contain"
+            alt="Justa"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <article className="w-full md:aspect-square md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-gray-100 border-[0.5px] border-neutral-800 order-1 md:order-2">
           <div className="flex flex-col flex-1 shrink gap-6 items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
@@ -63,8 +70,10 @@ export function CofoundersSection() {
                   Justa nauczy dziergać każdego - NAPRAWDĘ! Na warsztatach nie spuści Was z oczka, wytłumaczy każdy etap i pomoże w procesie twórczym!
                 </p>
               </div>
-              <img
+              <Image
                 src="/images/sweater.png"
+                width={270}
+                height={252}
                 className="block sm:hidden lg:block object-contain min-[1326px]:mt-6 w-full max-w-[135px] min-[1326px]:max-w-[270px] h-auto"
                 alt="Sweater illustration"
               />

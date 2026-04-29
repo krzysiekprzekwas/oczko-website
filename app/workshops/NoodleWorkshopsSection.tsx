@@ -1,16 +1,19 @@
 import React from "react";
+import Image from "next/image";
 import Link from "../components/Link";
 
 export function NoodleWorkshopsSection() {
   return (
     <>
       <section id="cofounders" className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center border-[0.5px] border-neutral-800">
-            <img
-              src="/images/noodle_workshop_1.png"
-              className="object-contain w-full"
-              alt="Workshops"
-            />
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square relative flex justify-center items-center border-[0.5px] border-neutral-800">
+          <Image
+            src="/images/noodle_workshop_1.png"
+            fill
+            className="object-contain"
+            alt="Noodle scarf workshop"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <article className="w-full md:w-1/2 md:h-full md:aspect-square flex flex-col justify-center items-center bg-oczko-green-100 border-[0.5px] border-neutral-800">
             <div className="flex flex-col flex-1 shrink items-center self-stretch w-full basis-0 md:min-h-[600px] min-w-60 max-md:max-w-full px-10 py-16 max-md:px-4 max-md:py-6">
@@ -36,9 +39,11 @@ export function NoodleWorkshopsSection() {
                       Wykonany z prawdziwej wełny, alpaki, moheru i merino oraz w kolorach, które najbardziej do Ciebie przemawiają!
                     </p>
                   </div>
-                  <img
+                  <Image
                     src="/images/eye_hearth.png"
-                    className="object-contain mt-6 w-full max-w-[80px] h-auto mx-auto"
+                    width={80}
+                    height={82}
+                    className="object-contain mt-6 mx-auto"
                     alt="Eye Heart"
                   />
                   <Link
@@ -54,18 +59,23 @@ export function NoodleWorkshopsSection() {
 
       <section className="flex flex-col md:flex-row w-full md:aspect-[2/1]">
         <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
-            <img
-              src="/images/noodle_workshop_3.png"
-              className="object-contain max-w-[480px] h-auto animate-[spin_5.5s_linear_infinite]"
-              alt="Workshops"
-            />
+          <Image
+            src="/images/noodle_workshop_3.png"
+            width={960}
+            height={748}
+            className="object-contain max-w-[480px] h-auto animate-[spin_5.5s_linear_infinite]"
+            alt="Workshop illustration"
+            sizes="(max-width: 768px) 100vw, 480px"
+          />
         </div>
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
-            <img
-              src="/images/noodle_workshop_2.png"
-              className="object-contain w-full"
-              alt="Workshops"
-            />
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square relative flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 order-2 md:order-1">
+          <Image
+            src="/images/noodle_workshop_2.png"
+            fill
+            className="object-contain"
+            alt="Noodle scarf workshop"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </section>
     </>

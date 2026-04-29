@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export type BannerItem =
   | { type: "text"; value: string }
@@ -33,11 +34,13 @@ export function BannerWithImages({ items }: BannerWithImagesProps) {
                 {item.value}
               </span>
             ) : (
-              <img
+              <Image
                 key={`img-${idx}`}
                 src={item.src}
                 alt={item.alt || ""}
-                className="inline-block h-10 mx-4 align-middle"
+                width={48}
+                height={44}
+                className="inline-block h-10 w-auto mx-4 align-middle"
                 draggable={false}
               />
             )

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "../components/Link";
 
 export function WorkshopActivitiesSection() {
@@ -20,10 +21,13 @@ export function WorkshopActivitiesSection() {
                 Karty pomagają wejść na nowe tory rozmowy. Wspólnie odpowiadamy na nieoczywiste pytania, które prowadzą do szczerych rozmów i śmiechu.
               </p>
             </div>
-            <img
-              src="./images/knit_tangle_2.png"
-              className="object-contain self-center max-w-full aspect-square w-[366px]"
-              alt="Open knitting event"
+            <Image
+              src="/images/knit_tangle_2.png"
+              width={366}
+              height={365}
+              className="object-contain self-center max-w-full"
+              alt="Communication cards at knitting workshop"
+              sizes="(max-width: 768px) 100vw, 366px"
             />
           </div>
           <div className="flex gap-8 items-center self-center text-xs leading-tight text-oczko-orange-600 uppercase whitespace-nowrap max-md:mt-10">

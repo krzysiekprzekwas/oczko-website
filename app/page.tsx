@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { PhotoCarousel } from "./components/PhotoCarousel";
@@ -31,10 +32,13 @@ export default function Home() {
       <Banner />
       <WorkshopsSection />
       <section className="max-md:hidden">
-        <img
-          src="./images/group.png"
-          className="object-contain w-full max-md:max-w-full"
+        <Image
+          src="/images/group.png"
+          width={1440}
+          height={850}
+          className="object-contain w-full"
           alt="Workshop scene"
+          sizes="100vw"
         />
       </section>
       <TestimonialsSection />

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "../components/Link";
 
 export function ContactSection() {
@@ -45,12 +46,14 @@ export function ContactSection() {
               </div>
             </div>
         </article>
-        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
-            <img
-              src="/images/contact.png"
-              className="object-contain w-full"
-              alt="Contact"
-            />
+        <div className="w-full aspect-square md:w-1/2 md:h-full md:aspect-square relative flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800">
+          <Image
+            src="/images/contact.png"
+            fill
+            className="object-contain"
+            alt="Contact"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </section>
     </>

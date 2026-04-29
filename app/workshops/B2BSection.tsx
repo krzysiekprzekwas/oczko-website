@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "../components/Link";
 
 export function B2BSection() {
@@ -28,11 +29,15 @@ export function B2BSection() {
         </div>
       </article>
       <article className="flex overflow-hidden flex-col justify-center items-center self-stretch w-full md:w-1/3 bg-white border-solid border-[0.5px] border-neutral-800 min-h-[480px]">
-        <img
-            src="./images/eye_hearth_2.png"
-            className="object-contain w-full"
+        <div className="relative w-full aspect-square">
+          <Image
+            src="/images/eye_hearth_2.png"
+            fill
+            className="object-contain"
             alt="Workshop showcase"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
+        </div>
       </article>
     </section>
   );
