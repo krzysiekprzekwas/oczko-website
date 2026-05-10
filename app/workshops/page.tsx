@@ -36,7 +36,7 @@ const workshopsImages: CarouselImage[] = [
 
 export default function Workshops() {
   return (
-    <>
+    <div className="border-t-[0.5px] border-l-[0.5px] border-neutral-800">
       <NoodleWorkshopsSection />
       <Banner />
       <AccessoriesWorkshopsSection />
@@ -45,6 +45,6 @@ export default function Workshops() {
       <WorkshopActivitiesSection />
       <B2BSection/>
       <Footer backgroundColor="bg-oczko-orange-400" color="oczko-green-1000"/>
-    </>
+    </div>
   );
 }

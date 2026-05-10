@@ -31,11 +31,11 @@ const aboutImages: CarouselImage[] = [
 
 export default function About() {
   return (
-    <>
+    <div className="border-t-[0.5px] border-l-[0.5px] border-neutral-800">
       <CofoundersSection />
       <Banner />
       <PhotoCarousel images={aboutImages}/>
       <Footer />
-    </>
+    </div>
   );
 }

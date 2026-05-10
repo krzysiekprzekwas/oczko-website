@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <>
+    <div className="border-t-[0.5px] border-l-[0.5px] border-neutral-800">
       <ContactSection />
       <BannerPartners/>
       <CTASection backgroundColor="bg-oczko-green-500" />
       <Banner />
       <Footer backgroundColor="bg-oczko-violet-200" color="oczko-green-1000"/>
-    </>
+    </div>
   );
 }

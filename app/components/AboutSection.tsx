@@ -8,7 +8,7 @@ export function AboutSection() {
       className="flex flex-col md:flex-row w-full min-h-[720px]"
       id="about"
     >
-      <div className="flex-1 flex justify-center items-center bg-oczko-violet-100 border-[0.5px] border-neutral-800 max-md:hidden">
+      <div className="flex-1 flex justify-center items-center bg-oczko-violet-100 border-r-[0.5px] border-b-[0.5px] border-neutral-800 max-md:hidden">
         <div className="relative w-full max-w-[509px] aspect-[510/718]">
           <Image
             src="/images/surfer.png"
@@ -19,7 +19,7 @@ export function AboutSection() {
           />
         </div>
       </div>
-      <article className="flex-1 flex flex-col justify-center items-center bg-white max-md:bg-oczko-violet-100 border-[0.5px] border-neutral-800">
+      <article className="flex-1 flex flex-col justify-center items-center bg-white max-md:bg-oczko-violet-100 border-r-[0.5px] border-b-[0.5px] border-neutral-800">
         <div className="flex flex-col gap-8 px-10 py-16">
           <div className="gap-12 w-full">
             <div className="flex flex-col gap-12 w-full">

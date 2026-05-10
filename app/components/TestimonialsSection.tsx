@@ -4,7 +4,7 @@ import Link from "./Link";
 
 export function TestimonialsSection() {
   return (
-    <section className="flex overflow-hidden flex-col justify-center w-full bg-white border-solid border-b-[0.5px] border-b-neutral-800 min-h-[850px] max-md:px-5 max-md:max-w-full">
+    <section className="flex overflow-hidden flex-col justify-center w-full bg-white border-r-[0.5px] border-b-[0.5px] border-neutral-800 min-h-[850px] max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col flex-1 gap-16 justify-center w-full px-10 py-16 max-md:max-w-full">
         <div className="gap-12 w-full max-md:max-w-full">
           <div className="flex flex-col gap-12 justify-center w-full text-center max-md:max-w-full">
@@ -20,7 +20,7 @@ export function TestimonialsSection() {
               src="/images/testimonial_1.png"
               width={872}
               height={562}
-              className="object-contain grow shrink self-stretch my-auto min-w-60 max-md:max-w-full"
+              className="object-contain grow shrink self-stretch my-auto min-w-60 w-[364px] max-md:max-w-full"
               alt="Customer testimonial 1"
               sizes="(max-width: 768px) 100vw, 364px"
             />
@@ -28,7 +28,7 @@ export function TestimonialsSection() {
               src="/images/testimonial_2.png"
               width={718}
               height={286}
-              className="object-contain grow shrink self-stretch my-auto min-w-60"
+              className="object-contain grow shrink self-stretch my-auto min-w-60 w-[287px]"
               alt="Customer testimonial 2"
               sizes="(max-width: 768px) 100vw, 287px"
             />
@@ -36,7 +36,7 @@ export function TestimonialsSection() {
               src="/images/testimonial_3.png"
               width={868}
               height={297}
-              className="object-contain grow shrink self-stretch my-auto min-w-60 max-md:max-w-full"
+              className="object-contain grow shrink self-stretch my-auto min-w-60 w-[362px] max-md:max-w-full"
               alt="Customer testimonial 3"
               sizes="(max-width: 768px) 100vw, 362px"
             />

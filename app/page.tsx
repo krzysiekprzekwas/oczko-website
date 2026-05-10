@@ -26,6 +26,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <div className="border-t-[0.5px] border-l-[0.5px] border-neutral-800">
       <BannerWithImages items={items} />
       <AboutSection />
       <PhotoCarousel />
@@ -46,6 +47,7 @@ export default function Home() {
       <CTASection />
       <SocialsSection />
       <Footer />
+      </div>
     </>
   );
 }
