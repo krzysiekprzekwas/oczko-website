@@ -57,6 +57,11 @@ html {
 .text-base {
   line-height: 130%;
 }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Safelist dynamic color classes to ensure they're included in the build */
 @layer utilities {
   .text-oczko-violet-100 { color: var(--color-oczko-violet-100); }
@@ -74,4 +79,9 @@ html {
   .text-oczko-orange-400 { color: var(--color-oczko-orange-400); }
   .text-oczko-orange-500 { color: var(--color-oczko-orange-500); }
   .text-oczko-orange-600 { color: var(--color-oczko-orange-600); }
+
+  .marquee-track {
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
 }
