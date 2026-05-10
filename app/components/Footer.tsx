@@ -85,7 +85,7 @@ export function Footer({
               </a>
               <div className="flex gap-1 items-center self-center md:self-start p-2 text-xs leading-tight">
                 <span className={`self-stretch my-auto text-${color}`}>
-                  © 2025 OCZKO.WORKKSHOPS
+                  © 2025 OCZKO.WORKSHOPS
                 </span>
               </div>
             </div>

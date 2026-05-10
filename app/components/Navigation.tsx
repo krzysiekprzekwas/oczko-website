@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import Image from "next/image";
+import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import Link from "./Link";
 
@@ -11,11 +12,11 @@ export function Navigation() {
   return (
     <>
       <header className="sticky top-0 z-50 flex flex-wrap gap-10 justify-between items-center px-10 w-full text-oczko-violet-500 bg-oczko-green-100 border-solid border-[0.5px] border-oczko-stroke min-h-20 max-md:px-5 max-md:max-w-full">
-        <a href="/" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
+        <NextLink href="/" className="flex gap-2 justify-center items-center self-stretch my-auto text-4xl tracking-tighter leading-none whitespace-nowrap">
           <span className="self-stretch my-auto text-oczko-violet-500 font-salted">
             oczko.workshops
           </span>
-        </a>
+        </NextLink>
         {/* Hamburger/Close button for mobile */}
         <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 p-2 focus:outline-none"
@@ -32,40 +33,40 @@ export function Navigation() {
         <nav
           className={`flex gap-2 items-center self-stretch my-auto text-base max-md:hidden`}
         >
-          <a
+          <NextLink
             href="/about"
             className={`flex gap-2 justify-center items-center m-2 self-stretch border-b-1 transition-all duration-200 leading-none ${
-              pathname === '/about' 
-                ? 'border-oczko-violet-500' 
+              pathname === '/about'
+                ? 'border-oczko-violet-500'
                 : 'border-transparent hover:border-oczko-violet-500'
             }`}
           >
             <span className="self-stretch text-oczko-violet-500">O NAS</span>
-          </a>
-          <a
+          </NextLink>
+          <NextLink
             href="/workshops"
             className={`flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 transition-all duration-200 leading-1 ${
-              pathname === '/workshops' 
-                ? 'border-oczko-violet-500' 
+              pathname === '/workshops'
+                ? 'border-oczko-violet-500'
                 : 'border-transparent hover:border-oczko-violet-500'
             }`}
           >
             <span className="self-stretch my-auto text-oczko-violet-500">
               WARSZTATY
             </span>
-          </a>
-          <a
+          </NextLink>
+          <NextLink
             href="/contact"
             className={`flex gap-2 justify-center items-center m-2 self-stretch whitespace-nowrap border-b-1 transition-all duration-200 leading-1 ${
-              pathname === '/contact' 
-                ? 'border-oczko-violet-500' 
+              pathname === '/contact'
+                ? 'border-oczko-violet-500'
                 : 'border-transparent hover:border-oczko-violet-500'
             }`}
           >
             <span className="self-stretch my-auto text-oczko-violet-500">
               KONTAKT
             </span>
-          </a>
+          </NextLink>
         </nav>
       </header>
       
