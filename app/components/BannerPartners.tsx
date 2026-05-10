@@ -18,28 +18,17 @@ const defaultPartners: PartnerImage[] = [
 ];
 
 export function BannerPartners({ items = defaultPartners }: { items?: PartnerImage[] }) {
-  // Create multiple copies of images for seamless marquee effect
-  const marqueeImages = [...items, ...items, ...items, ...items, ...items];
+  const marqueeImages = [...items, ...items];
 
   return (
-    <section className="relative overflow-hidden flex flex-col justify-center px-0 w-full text-4xl text-oczko-violet-600 bg-oczko-violet-200 max-md:bg-oczko-green-100 border-solid border-[0.5px] border-neutral-800 min-h-[100px] max-md:px-0 max-md:max-w-full">
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        .marquee-container {
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
+    <section className="relative overflow-hidden flex flex-col justify-center px-0 w-full text-4xl text-oczko-violet-600 bg-oczko-violet-200 max-md:bg-oczko-green-100 border-r-[0.5px] border-b-[0.5px] border-neutral-800 min-h-[100px] max-md:px-0 max-md:max-w-full">
       <div className="flex items-center w-full h-full">
         <div className="flex-shrink-0 px-10 font-salted">
           <span className="text-2xl">Zaufali nam: </span>
         </div>
-        
-        {/* Marquee images section */}
+
         <div className="marquee whitespace-nowrap flex items-center flex-1 overflow-hidden">
-          <div className="marquee-container flex">
+          <div className="marquee-track flex">
             {marqueeImages.map((image, idx) => (
               <Image
                 key={`img-${idx}`}
