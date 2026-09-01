@@ -33,6 +33,12 @@ export function Navigation() {
         <nav
           className={`flex gap-2 items-center self-stretch my-auto text-base max-md:hidden`}
         >
+          <a
+            href="https://sklep.oczkoworkshops.pl"
+            className="flex gap-2 justify-center items-center m-2 self-stretch border-b-1 border-transparent hover:border-oczko-violet-500 transition-all duration-200 leading-none"
+          >
+            <span className="self-stretch text-oczko-violet-500">SKLEP</span>
+          </a>
           <NextLink
             href="/about"
             className={`flex gap-2 justify-center items-center m-2 self-stretch border-b-1 transition-all duration-200 leading-none ${
@@ -84,6 +90,12 @@ export function Navigation() {
             />
             {/* Links */}
             <nav className="flex flex-col w-full gap-6 items-start">
+              <Link
+                href="https://sklep.oczkoworkshops.pl"
+                text="SKLEP"
+                onClick={() => setMenuOpen(false)}
+              />
+              <div className="w-full h-[0.5px] bg-oczko-stroke"></div>
               <Link
                 href="/about"
                 text="O NAS"
